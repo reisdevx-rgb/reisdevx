@@ -115,7 +115,7 @@ export function Navbar() {
               <Link
                 key={l.to}
                 to={l.to}
-                className={`font-mono-label px-4 py-3 transition-colors ${active ? "text-[var(--accent)] bg-foreground/5" : "text-foreground/80 hover:text-foreground hover:bg-foreground/5"}`}
+                className={`font-mono-label text-lg py-2 border-b border-border/10 transition-colors ${active ? "text-[var(--accent)]" : "text-foreground/80 hover:text-foreground"}`}
               >
                 {l.label}
               </Link>
