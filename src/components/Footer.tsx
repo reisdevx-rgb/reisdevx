@@ -13,12 +13,12 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <div className="font-mono-label text-background/40 mb-4">Navegação</div>
-          <ul className="space-y-2 text-sm text-background/80">
-            <li><Link to="/sobre" className="hover:text-[var(--gold)]">Sobre</Link></li>
-            <li><Link to="/servicos" className="hover:text-[var(--gold)]">Serviços</Link></li>
-            <li><Link to="/portfolio" className="hover:text-[var(--gold)]">Portfólio</Link></li>
-            <li><Link to="/contato" className="hover:text-[var(--gold)]">Contato</Link></li>
+          <div className="font-mono-label text-foreground/40 mb-4">Navegação</div>
+          <ul className="space-y-2 text-sm text-foreground/80">
+            <li><Link to="/sobre" className="hover:text-[var(--accent)] transition-colors">Sobre</Link></li>
+            <li><Link to="/servicos" className="hover:text-[var(--accent)] transition-colors">Serviços</Link></li>
+            <li><Link to="/portfolio" className="hover:text-[var(--accent)] transition-colors">Portfólio</Link></li>
+            <li><Link to="/contato" className="hover:text-[var(--accent)] transition-colors">Contato</Link></li>
           </ul>
         </div>
         <div>
