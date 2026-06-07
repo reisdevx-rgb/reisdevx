@@ -70,8 +70,8 @@ function Portfolio() {
                 onClick={() => setPreviewUrl(p.url)}
               >
                 <img src={p.img} alt={p.n} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
-                <div className="absolute inset-0 bg-foreground/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="bg-background text-foreground font-mono-label px-6 py-3 border border-foreground/10 hover:bg-[var(--gold)] hover:text-background transition-colors">
+                <div className="absolute inset-0 bg-[var(--primary)]/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                  <div className="bg-white text-[var(--primary)] font-mono-label px-6 py-3 rounded-sm font-bold shadow-xl">
                     VISUALIZAR MODELO
                   </div>
                 </div>
