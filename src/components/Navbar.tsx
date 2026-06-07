@@ -103,12 +103,12 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile/tablet dropdown panel - compact, anchored top-right */}
+      {/* Mobile/tablet slide-out panel - right to left */}
       <div
         ref={panelRef}
-        className={`lg:hidden absolute right-4 top-[4.5rem] w-72 max-w-[calc(100vw-2rem)] bg-background border border-border shadow-2xl origin-top-right transition-all duration-200 ${open ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}`}
+        className={`lg:hidden fixed top-0 right-0 h-screen w-80 max-w-[85vw] bg-background border-l border-border shadow-2xl transition-transform duration-300 ease-in-out ${open ? "translate-x-0" : "translate-x-full"}`}
       >
-        <nav className="flex flex-col p-2">
+        <nav className="flex flex-col p-6 pt-24 gap-4">
           {links.map((l) => {
             const active = pathname === l.to;
             return (
