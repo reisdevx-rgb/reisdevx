@@ -33,8 +33,8 @@ function Contato() {
       <section className="px-6 lg:px-12 py-24 md:py-32">
         <div className="mx-auto max-w-[1400px]">
           <ScrollReveal>
-            <div className="font-mono-label text-[var(--gold)] mb-6">Vamos trabalhar juntos</div>
-            <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Protocolo <span className="text-[var(--gold)]">de Build</span></h1>
+            <div className="font-mono-label text-[var(--accent)] mb-6">Vamos trabalhar juntos</div>
+            <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Protocolo <span className="text-[var(--primary)]">de Build</span></h1>
           </ScrollReveal>
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
             <StaggerReveal staggerDelay={100}>
