@@ -84,7 +84,7 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <Link
             to="/contato"
-            className="bg-foreground text-background font-mono-label px-5 py-3 hover:bg-[var(--gold)] hover:text-foreground transition-colors"
+            className="bg-[var(--primary)] text-white font-mono-label px-5 py-3 hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] transition-all rounded-sm"
           >
             ORÇAMENTO
 
