@@ -95,9 +95,9 @@ function Sobre() {
             <StaggerReveal staggerDelay={100}>
               {timeline.map((t) => (
                 <div key={t.y} className="grid md:grid-cols-[100px_1fr] gap-6 md:gap-12 items-start">
-                  <div className="font-display font-black text-4xl text-[var(--gold)]">{t.y}</div>
+                  <div className="font-display font-black text-4xl text-[var(--primary)]">{t.y}</div>
                   <div className="md:pl-8 relative">
-                    <div className="hidden md:block absolute -left-1 top-2 w-3 h-3 rounded-full bg-[var(--gold)]" />
+                    <div className="hidden md:block absolute -left-1 top-2 w-3 h-3 rounded-full bg-[var(--primary)]" />
                     <h3 className="font-display font-bold text-2xl">{t.t}</h3>
                     <p className="text-muted-foreground mt-2 max-w-2xl">{t.d}</p>
                   </div>
