@@ -50,7 +50,7 @@ function Portfolio() {
                 <button
                   key={f}
                   onClick={() => setActive(f)}
-                  className={`font-mono-label px-5 py-3 border transition-colors ${active === f ? "bg-foreground text-background border-foreground" : "border-border hover:border-foreground"}`}
+                  className={`font-mono-label px-5 py-3 border transition-colors rounded-sm ${active === f ? "bg-[var(--primary)] text-white border-[var(--primary)]" : "border-border hover:border-[var(--primary)]"}`}
                 >
                   {f}
                 </button>
