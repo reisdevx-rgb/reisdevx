@@ -39,8 +39,8 @@ function Contato() {
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
             <StaggerReveal staggerDelay={100}>
               {info.map((i) => (
-                <div key={i.t} className="bg-background p-8">
-                  <i.icon className="w-6 h-6 text-[var(--gold)]" strokeWidth={1.5} />
+                <div key={i.t} className="bg-[#111111] p-8 hover:bg-[#161616] transition-colors">
+                  <i.icon className="w-6 h-6 text-[var(--primary)]" strokeWidth={1.5} />
                   <div className="font-mono-label text-muted-foreground mt-6">{i.t}</div>
                   <div className="font-display font-bold text-lg mt-1">{i.v}</div>
                 </div>
