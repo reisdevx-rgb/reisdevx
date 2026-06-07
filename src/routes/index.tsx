@@ -85,9 +85,9 @@ function Index() {
         <div className="mx-auto max-w-[1400px] grid lg:grid-cols-2 gap-16">
           <ScrollReveal>
             <div>
-              <div className="font-mono-label text-[var(--gold)] mb-6">Nossa Filosofia</div>
+              <div className="font-mono-label text-[var(--accent)] mb-6">Nossa Filosofia</div>
               <h2 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">
-                Código é <span className="text-[var(--gold)]">arquitetura.</span>
+                Código é <span className="text-[var(--primary)]">arquitetura.</span>
               </h2>
             </div>
           </ScrollReveal>
