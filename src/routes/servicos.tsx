@@ -45,10 +45,10 @@ function Servicos() {
         <div className="mx-auto max-w-[1400px]">
           <StaggerReveal staggerDelay={80}>
             {services.map((s) => (
-              <div key={s.n} className="border-b border-border group hover:bg-foreground hover:text-background transition-colors">
+              <div key={s.n} className="border-b border-border group hover:bg-[#111111] transition-colors">
                 <div className="px-6 lg:px-12 py-10 grid grid-cols-[80px_50px_1fr_auto] md:grid-cols-[120px_60px_1fr_220px_40px] items-center gap-6">
-                  <div className="font-display font-black text-3xl md:text-4xl text-foreground/30 group-hover:text-[var(--gold)]">{s.n}</div>
-                  <s.icon className="w-6 h-6 text-[var(--gold)]" strokeWidth={1.5} />
+                  <div className="font-display font-black text-3xl md:text-4xl text-foreground/10 group-hover:text-[var(--primary)] transition-colors">{s.n}</div>
+                  <s.icon className="w-6 h-6 text-[var(--primary)]" strokeWidth={1.5} />
                   <div>
                     <h3 className="font-display font-bold text-2xl md:text-3xl">{s.t}</h3>
                     <div className="font-mono-label text-muted-foreground group-hover:text-background/60 mt-1">{s.s}</div>
