@@ -46,10 +46,10 @@ function Sobre() {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <div className="border-l-2 border-[var(--gold)] pl-8 py-4">
+            <div className="border-l-2 border-[var(--primary)] pl-8 py-4 bg-[#111111]/50 backdrop-blur-sm">
               <p className="font-display text-2xl md:text-3xl italic leading-snug">"Cada site que criamos é um instrumento de poder para o nosso cliente."</p>
               <div className="flex items-center gap-4 mt-8">
-                <div className="w-14 h-14 rounded-full bg-foreground text-background flex items-center justify-center font-display font-bold text-xl">R</div>
+                <div className="w-14 h-14 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold text-xl">R</div>
                 <div>
                   <div className="font-bold">Rafael Reis</div>
                   <div className="font-mono-label text-muted-foreground">CEO & Fundador</div>
