@@ -54,10 +54,10 @@ function Index() {
           </ScrollReveal>
           <ScrollReveal delay={300}>
             <div className="mt-12 flex flex-wrap gap-4 pl-4 md:pl-8 lg:pl-12">
-              <Link to="/contato" className="group inline-flex items-center gap-3 bg-foreground text-background font-mono-label px-7 py-4 hover:bg-[var(--gold)] hover:text-foreground transition-colors">
+              <Link to="/contato" className="group inline-flex items-center gap-3 bg-[var(--primary)] text-white font-mono-label px-7 py-4 hover:shadow-[0_0_25px_rgba(0,102,255,0.5)] transition-all rounded-sm">
                 ORÇAMENTO <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link to="/portfolio" className="inline-flex items-center gap-3 border border-foreground/30 px-7 py-4 font-mono-label hover:border-foreground transition-colors">
+              <Link to="/portfolio" className="inline-flex items-center gap-3 border border-[var(--primary)] text-[var(--primary)] px-7 py-4 font-mono-label hover:bg-[var(--primary)] hover:text-white transition-all rounded-sm">
                 Ver Portfólio
               </Link>
             </div>
