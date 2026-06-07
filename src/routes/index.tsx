@@ -95,7 +95,7 @@ function Index() {
             <div className="space-y-6 text-lg text-muted-foreground self-end">
               <p>Tratamos cada projeto como uma obra estrutural. Cada linha de código é uma decisão de engenharia; cada pixel, uma escolha estética deliberada.</p>
               <p>Não construímos apenas sites — construímos instrumentos de dominação digital que geram resultados mensuráveis, crescimento sustentável e presença que impressiona.</p>
-              <Link to="/sobre" className="inline-flex items-center gap-2 text-foreground font-mono-label border-b border-foreground pb-1 hover:text-[var(--gold)] hover:border-[var(--gold)]">
+              <Link to="/sobre" className="inline-flex items-center gap-2 text-foreground font-mono-label border-b border-[var(--primary)] pb-1 hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors">
                 Conheça nossa história <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
