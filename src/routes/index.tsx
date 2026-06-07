@@ -145,13 +145,14 @@ function Index() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 lg:px-12 py-32 border-t border-border bg-foreground text-background">
-        <div className="mx-auto max-w-[1400px] text-center">
+      <section className="px-6 lg:px-12 py-32 border-t border-border bg-[#111111] text-foreground relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[var(--primary)]/10 blur-[120px] rounded-full pointer-events-none" />
+        <div className="mx-auto max-w-[1400px] text-center relative z-10">
           <ScrollReveal>
-            <div className="font-mono-label text-[var(--gold)] mb-6">Pronto para começar?</div>
-            <h2 className="font-display font-black text-5xl md:text-7xl">Vamos construir <span className="text-[var(--gold)]">juntos.</span></h2>
-            <p className="text-background/70 mt-6 max-w-2xl mx-auto text-lg">Transforme sua visão em realidade digital. Nossa equipe está pronta para criar algo extraordinário.</p>
-            <Link to="/contato" className="mt-10 inline-flex items-center gap-3 bg-[var(--gold)] text-foreground font-mono-label px-8 py-4 hover:bg-background hover:text-foreground transition-colors">
+            <div className="font-mono-label text-[var(--accent)] mb-6">Pronto para começar?</div>
+            <h2 className="font-display font-black text-5xl md:text-7xl">Vamos construir <span className="text-[var(--primary)]">juntos.</span></h2>
+            <p className="text-muted-foreground mt-6 max-w-2xl mx-auto text-lg">Transforme sua visão em realidade digital. Nossa equipe está pronta para criar algo extraordinário.</p>
+            <Link to="/contato" className="mt-10 inline-flex items-center gap-3 bg-[var(--primary)] text-white font-mono-label px-8 py-4 hover:shadow-[0_0_25px_rgba(0,102,255,0.5)] transition-all rounded-sm">
               ORÇAMENTO <ArrowRight className="w-4 h-4" />
             </Link>
           </ScrollReveal>
