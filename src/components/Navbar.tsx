@@ -72,10 +72,10 @@ export function Navbar() {
               <Link
                 key={l.to}
                 to={l.to}
-                className={`font-mono-label transition-colors ${active ? "text-[var(--gold)]" : "text-foreground/70 hover:text-foreground"}`}
+                className={`font-mono-label transition-colors ${active ? "text-[var(--accent)]" : "text-foreground/70 hover:text-foreground"}`}
               >
                 {l.label}
-                {active && <span className="block h-px w-full bg-[var(--gold)] mt-1" />}
+                {active && <span className="block h-px w-full bg-[var(--accent)] mt-1" />}
               </Link>
             );
           })}
