@@ -71,10 +71,11 @@ function Contato() {
           </ScrollReveal>
 
           <ScrollReveal delay={150}>
-            <aside className="bg-foreground text-background p-8 md:p-10 self-start">
-              <div className="flex items-center justify-between">
-                <div className="font-mono-label text-[var(--gold)]">Manifesto do Projeto</div>
-                <span className="font-mono-label flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[var(--gold)] animate-pulse" /> Live</span>
+            <aside className="bg-[#111111] text-foreground p-8 md:p-10 self-start border border-border rounded-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--primary)]/5 blur-[40px] rounded-full" />
+              <div className="relative z-10 flex items-center justify-between">
+                <div className="font-mono-label text-[var(--accent)]">Manifesto do Projeto</div>
+                <span className="font-mono-label flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse shadow-[0_0_8px_var(--accent)]" /> Live</span>
               </div>
               <div className="mt-8 space-y-5 font-mono text-sm">
                 <Row k="CLIENTE" v={form.nome} />
