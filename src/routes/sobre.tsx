@@ -40,16 +40,16 @@ function Sobre() {
         <div className="mx-auto max-w-[1400px] grid lg:grid-cols-2 gap-16 items-start">
           <ScrollReveal>
             <div>
-              <div className="font-mono-label text-[var(--gold)] mb-6">Quem somos</div>
-              <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Sobre a <span className="text-[var(--gold)]">ReisDevX</span></h1>
+              <div className="font-mono-label text-[var(--accent)] mb-6">Quem somos</div>
+              <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Sobre a <span className="text-[var(--primary)]">ReisDevX</span></h1>
               <p className="text-lg text-muted-foreground mt-8 max-w-xl">Somos um estúdio de desenvolvimento web premium, fundado com a missão de transformar negócios através de soluções digitais que dominam seu mercado.</p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <div className="border-l-2 border-[var(--gold)] pl-8 py-4">
+            <div className="border-l-2 border-[var(--primary)] pl-8 py-4 bg-[#111111]/50 backdrop-blur-sm">
               <p className="font-display text-2xl md:text-3xl italic leading-snug">"Cada site que criamos é um instrumento de poder para o nosso cliente."</p>
               <div className="flex items-center gap-4 mt-8">
-                <div className="w-14 h-14 rounded-full bg-foreground text-background flex items-center justify-center font-display font-bold text-xl">R</div>
+                <div className="w-14 h-14 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold text-xl">R</div>
                 <div>
                   <div className="font-bold">Rafael Reis</div>
                   <div className="font-mono-label text-muted-foreground">CEO & Fundador</div>
@@ -64,15 +64,15 @@ function Sobre() {
         <div className="mx-auto max-w-[1400px]">
           <ScrollReveal>
             <div className="mb-16">
-              <div className="font-mono-label text-[var(--gold)] mb-4">Nossos Princípios</div>
-              <h2 className="font-display font-black text-5xl md:text-6xl">O que nos <span className="text-[var(--gold)]">define</span></h2>
+              <div className="font-mono-label text-[var(--accent)] mb-4">Nossos Princípios</div>
+              <h2 className="font-display font-black text-5xl md:text-6xl">O que nos <span className="text-[var(--primary)]">define</span></h2>
             </div>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
             <StaggerReveal staggerDelay={100}>
               {principles.map((p) => (
-                <div key={p.t} className="bg-background p-10">
-                  <p.icon className="w-7 h-7 text-[var(--gold)]" strokeWidth={1.5} />
+                <div key={p.t} className="bg-[#111111] p-10 hover:bg-[#161616] transition-colors">
+                  <p.icon className="w-7 h-7 text-[var(--primary)]" strokeWidth={1.5} />
                   <h3 className="font-display font-bold text-xl mt-6">{p.t}</h3>
                   <p className="text-muted-foreground mt-3 text-sm">{p.d}</p>
                 </div>
@@ -86,8 +86,8 @@ function Sobre() {
         <div className="mx-auto max-w-[1400px]">
           <ScrollReveal>
             <div className="mb-16">
-              <div className="font-mono-label text-[var(--gold)] mb-4">Nossa Jornada</div>
-              <h2 className="font-display font-black text-5xl md:text-6xl">Uma história de <span className="text-[var(--gold)]">evolução</span></h2>
+              <div className="font-mono-label text-[var(--accent)] mb-4">Nossa Jornada</div>
+              <h2 className="font-display font-black text-5xl md:text-6xl">Uma história de <span className="text-[var(--primary)]">evolução</span></h2>
             </div>
           </ScrollReveal>
           <div className="relative">
@@ -95,9 +95,9 @@ function Sobre() {
             <StaggerReveal staggerDelay={100}>
               {timeline.map((t) => (
                 <div key={t.y} className="grid md:grid-cols-[100px_1fr] gap-6 md:gap-12 items-start">
-                  <div className="font-display font-black text-4xl text-[var(--gold)]">{t.y}</div>
+                  <div className="font-display font-black text-4xl text-[var(--primary)]">{t.y}</div>
                   <div className="md:pl-8 relative">
-                    <div className="hidden md:block absolute -left-1 top-2 w-3 h-3 rounded-full bg-[var(--gold)]" />
+                    <div className="hidden md:block absolute -left-1 top-2 w-3 h-3 rounded-full bg-[var(--primary)]" />
                     <h3 className="font-display font-bold text-2xl">{t.t}</h3>
                     <p className="text-muted-foreground mt-2 max-w-2xl">{t.d}</p>
                   </div>
@@ -112,17 +112,17 @@ function Sobre() {
         <div className="mx-auto max-w-[1400px]">
           <ScrollReveal>
             <div className="mb-16">
-              <div className="font-mono-label text-[var(--gold)] mb-4">As Pessoas</div>
-              <h2 className="font-display font-black text-5xl md:text-6xl">Nossa <span className="text-[var(--gold)]">equipe</span></h2>
+              <div className="font-mono-label text-[var(--accent)] mb-4">As Pessoas</div>
+              <h2 className="font-display font-black text-5xl md:text-6xl">Nossa <span className="text-[var(--primary)]">equipe</span></h2>
             </div>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <StaggerReveal staggerDelay={120}>
               {team.map((m) => (
-                <div key={m.n} className="border border-border p-8 hover:border-[var(--gold)] transition-colors">
-                  <div className="w-16 h-16 rounded-full bg-foreground text-background flex items-center justify-center font-display font-bold">{m.i}</div>
+                <div key={m.n} className="border border-border p-8 bg-[#111111] hover:border-[var(--primary)] transition-colors rounded-sm group">
+                  <div className="w-16 h-16 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold group-hover:shadow-[0_0_15px_rgba(0,102,255,0.3)] transition-all">{m.i}</div>
                   <h3 className="font-display font-bold text-xl mt-6">{m.n}</h3>
-                  <div className="font-mono-label text-[var(--gold)] mt-1">{m.r}</div>
+                  <div className="font-mono-label text-[var(--accent)] mt-1">{m.r}</div>
                   <p className="text-muted-foreground mt-4 text-sm">{m.d}</p>
                 </div>
               ))}
@@ -134,8 +134,8 @@ function Sobre() {
       <section className="px-6 lg:px-12 py-24 border-t border-border text-center">
         <div className="mx-auto max-w-3xl">
           <ScrollReveal>
-            <h2 className="font-display font-black text-4xl md:text-5xl">Pronto para trabalhar <span className="text-[var(--gold)]">com a melhor equipe?</span></h2>
-            <Link to="/contato" className="mt-10 inline-flex items-center gap-3 bg-foreground text-background font-mono-label px-8 py-4 hover:bg-[var(--gold)] hover:text-foreground transition-colors">
+            <h2 className="font-display font-black text-4xl md:text-5xl">Pronto para trabalhar <span className="text-[var(--primary)]">com a melhor equipe?</span></h2>
+            <Link to="/contato" className="mt-10 inline-flex items-center gap-3 bg-[var(--primary)] text-white font-mono-label px-8 py-4 hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] transition-all rounded-sm">
               Falar com a equipe <ArrowRight className="w-4 h-4" />
             </Link>
           </ScrollReveal>

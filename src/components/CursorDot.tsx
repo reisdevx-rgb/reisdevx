@@ -59,13 +59,13 @@ export function CursorDot() {
       <div
         ref={ringRef}
         aria-hidden
-        className="pointer-events-none fixed top-0 left-0 z-[9999] w-9 h-9 rounded-full border border-[var(--gold)] transition-opacity duration-200"
-        style={{ opacity: visible ? 0.6 : 0 }}
+        className="pointer-events-none fixed top-0 left-0 z-[9999] w-9 h-9 rounded-full border border-[var(--primary)] transition-opacity duration-200"
+        style={{ opacity: visible ? 0.4 : 0 }}
       />
       <div
         ref={dotRef}
         aria-hidden
-        className="pointer-events-none fixed top-0 left-0 z-[9999] w-2 h-2 rounded-full bg-[var(--gold)] transition-opacity duration-200"
+        className="pointer-events-none fixed top-0 left-0 z-[9999] w-1.5 h-1.5 rounded-full bg-[var(--accent)] transition-opacity duration-200 shadow-[0_0_10px_rgba(0,191,255,0.8)]"
         style={{ opacity: visible ? 1 : 0 }}
       />
     </>

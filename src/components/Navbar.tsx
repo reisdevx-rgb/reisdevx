@@ -61,7 +61,7 @@ export function Navbar() {
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12 h-20 flex items-center justify-between">
 
         <Link to="/" className="font-display font-black text-xl tracking-tight relative z-50">
-          ReisDev<span className="text-[var(--gold)]">X</span>
+          ReisDev<span className="text-[var(--accent)]">X</span>
         </Link>
 
         {/* Desktop nav - Show on lg (1024px+) to keep tablet on mobile menu */}
@@ -72,10 +72,10 @@ export function Navbar() {
               <Link
                 key={l.to}
                 to={l.to}
-                className={`font-mono-label transition-colors ${active ? "text-[var(--gold)]" : "text-foreground/70 hover:text-foreground"}`}
+                className={`font-mono-label transition-colors ${active ? "text-[var(--accent)]" : "text-foreground/70 hover:text-foreground"}`}
               >
                 {l.label}
-                {active && <span className="block h-px w-full bg-[var(--gold)] mt-1" />}
+                {active && <span className="block h-px w-full bg-[var(--accent)] mt-1" />}
               </Link>
             );
           })}
@@ -84,7 +84,7 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <Link
             to="/contato"
-            className="bg-foreground text-background font-mono-label px-5 py-3 hover:bg-[var(--gold)] hover:text-foreground transition-colors"
+            className="bg-[var(--primary)] text-white font-mono-label px-5 py-3 hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] transition-all rounded-sm"
           >
             ORÇAMENTO
 
@@ -115,7 +115,7 @@ export function Navbar() {
               <Link
                 key={l.to}
                 to={l.to}
-                className={`font-mono-label px-4 py-3 transition-colors ${active ? "text-[var(--gold)] bg-foreground/5" : "text-foreground/80 hover:text-foreground hover:bg-foreground/5"}`}
+                className={`font-mono-label px-4 py-3 transition-colors ${active ? "text-[var(--accent)] bg-foreground/5" : "text-foreground/80 hover:text-foreground hover:bg-foreground/5"}`}
               >
                 {l.label}
               </Link>
@@ -123,7 +123,7 @@ export function Navbar() {
           })}
           <Link
             to="/contato"
-            className="mt-2 bg-foreground text-background font-mono-label px-4 py-3 text-center hover:bg-[var(--gold)] hover:text-foreground transition-colors"
+            className="mt-2 bg-[var(--primary)] text-white font-mono-label px-4 py-3 text-center rounded-sm transition-all"
           >
             ORÇAMENTO
           </Link>

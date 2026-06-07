@@ -40,8 +40,8 @@ function Portfolio() {
       <section className="px-6 lg:px-12 py-24 md:py-32">
         <div className="mx-auto max-w-[1400px]">
           <ScrollReveal>
-            <div className="font-mono-label text-[var(--gold)] mb-6">Nossos trabalhos</div>
-            <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Portfólio <span className="text-[var(--gold)]">Selecionado</span></h1>
+            <div className="font-mono-label text-[var(--accent)] mb-6">Nossos trabalhos</div>
+            <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Portfólio <span className="text-[var(--primary)]">Selecionado</span></h1>
             <p className="text-lg text-muted-foreground mt-8 max-w-2xl">Estruturas digitais construídas com precisão arquitetônica. Clique em qualquer projeto para ver os detalhes completos.</p>
           </ScrollReveal>
           <ScrollReveal delay={150}>
@@ -50,7 +50,7 @@ function Portfolio() {
                 <button
                   key={f}
                   onClick={() => setActive(f)}
-                  className={`font-mono-label px-5 py-3 border transition-colors ${active === f ? "bg-foreground text-background border-foreground" : "border-border hover:border-foreground"}`}
+                  className={`font-mono-label px-5 py-3 border transition-colors rounded-sm ${active === f ? "bg-[var(--primary)] text-white border-[var(--primary)]" : "border-border hover:border-[var(--primary)]"}`}
                 >
                   {f}
                 </button>
@@ -70,8 +70,8 @@ function Portfolio() {
                 onClick={() => setPreviewUrl(p.url)}
               >
                 <img src={p.img} alt={p.n} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
-                <div className="absolute inset-0 bg-foreground/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="bg-background text-foreground font-mono-label px-6 py-3 border border-foreground/10 hover:bg-[var(--gold)] hover:text-background transition-colors">
+                <div className="absolute inset-0 bg-[var(--primary)]/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                  <div className="bg-white text-[var(--primary)] font-mono-label px-6 py-3 rounded-sm font-bold shadow-xl">
                     VISUALIZAR MODELO
                   </div>
                 </div>
@@ -83,9 +83,9 @@ function Portfolio() {
 
       <section className="px-6 lg:px-12 py-24 border-t border-border text-center">
         <ScrollReveal>
-          <h2 className="font-display font-black text-4xl md:text-5xl">Seu projeto pode ser o <span className="text-[var(--gold)]">próximo case de sucesso.</span></h2>
+          <h2 className="font-display font-black text-4xl md:text-5xl">Seu projeto pode ser o <span className="text-[var(--primary)]">próximo case de sucesso.</span></h2>
           <p className="text-muted-foreground mt-6">Vamos construir algo extraordinário juntos.</p>
-          <Link to="/contato" className="mt-10 inline-flex items-center gap-3 bg-foreground text-background font-mono-label px-8 py-4 hover:bg-[var(--gold)] hover:text-foreground transition-colors">
+          <Link to="/contato" className="mt-10 inline-flex items-center gap-3 bg-[var(--primary)] text-white font-mono-label px-8 py-4 hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] transition-all rounded-sm">
             Iniciar meu projeto <ArrowRight className="w-4 h-4" />
           </Link>
         </ScrollReveal>
