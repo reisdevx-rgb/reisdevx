@@ -89,8 +89,8 @@ function Servicos() {
 
       <section className="px-6 lg:px-12 py-24 border-t border-border text-center">
         <ScrollReveal>
-          <h2 className="font-display font-black text-4xl md:text-5xl">Qual serviço se encaixa <span className="text-[var(--gold)]">no seu projeto?</span></h2>
-          <Link to="/contato" className="mt-10 inline-flex items-center gap-3 bg-foreground text-background font-mono-label px-8 py-4 hover:bg-[var(--gold)] hover:text-foreground transition-colors">
+          <h2 className="font-display font-black text-4xl md:text-5xl">Qual serviço se encaixa <span className="text-[var(--primary)]">no seu projeto?</span></h2>
+          <Link to="/contato" className="mt-10 inline-flex items-center gap-3 bg-[var(--primary)] text-white font-mono-label px-8 py-4 hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] transition-all rounded-sm">
             Falar com especialista <ArrowRight className="w-4 h-4" />
           </Link>
         </ScrollReveal>
