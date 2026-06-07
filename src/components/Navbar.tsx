@@ -115,7 +115,7 @@ export function Navbar() {
               <Link
                 key={l.to}
                 to={l.to}
-                className={`font-mono-label px-4 py-3 transition-colors ${active ? "text-[var(--gold)] bg-foreground/5" : "text-foreground/80 hover:text-foreground hover:bg-foreground/5"}`}
+                className={`font-mono-label px-4 py-3 transition-colors ${active ? "text-[var(--accent)] bg-foreground/5" : "text-foreground/80 hover:text-foreground hover:bg-foreground/5"}`}
               >
                 {l.label}
               </Link>
@@ -123,7 +123,7 @@ export function Navbar() {
           })}
           <Link
             to="/contato"
-            className="mt-2 bg-foreground text-background font-mono-label px-4 py-3 text-center hover:bg-[var(--gold)] hover:text-foreground transition-colors"
+            className="mt-2 bg-[var(--primary)] text-white font-mono-label px-4 py-3 text-center rounded-sm transition-all"
           >
             ORÇAMENTO
           </Link>
