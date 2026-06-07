@@ -86,8 +86,8 @@ function Sobre() {
         <div className="mx-auto max-w-[1400px]">
           <ScrollReveal>
             <div className="mb-16">
-              <div className="font-mono-label text-[var(--gold)] mb-4">Nossa Jornada</div>
-              <h2 className="font-display font-black text-5xl md:text-6xl">Uma história de <span className="text-[var(--gold)]">evolução</span></h2>
+              <div className="font-mono-label text-[var(--accent)] mb-4">Nossa Jornada</div>
+              <h2 className="font-display font-black text-5xl md:text-6xl">Uma história de <span className="text-[var(--primary)]">evolução</span></h2>
             </div>
           </ScrollReveal>
           <div className="relative">
