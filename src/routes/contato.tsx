@@ -105,7 +105,7 @@ function Contato() {
                 <div key={f.q} className="border-b border-border">
                   <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between text-left py-6">
                     <span className="font-display font-bold text-lg md:text-xl">{f.q}</span>
-                    {openFaq === i ? <Minus className="w-5 h-5 text-[var(--gold)]" /> : <Plus className="w-5 h-5 text-[var(--gold)]" />}
+                    {openFaq === i ? <Minus className="w-5 h-5 text-[var(--primary)]" /> : <Plus className="w-5 h-5 text-[var(--primary)]" />}
                   </button>
                   {openFaq === i && <p className="text-muted-foreground pb-6 max-w-2xl">{f.a}</p>}
                 </div>
