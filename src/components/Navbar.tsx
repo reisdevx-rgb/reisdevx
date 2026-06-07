@@ -123,12 +123,19 @@ export function Navbar() {
           })}
           <Link
             to="/contato"
-            className="mt-2 bg-[var(--primary)] text-white font-mono-label px-4 py-3 text-center rounded-sm transition-all"
+            className="mt-4 bg-[var(--primary)] text-white font-mono-label px-4 py-4 text-center rounded-sm transition-all hover:shadow-[0_0_20px_rgba(0,102,255,0.4)]"
           >
             ORÇAMENTO
           </Link>
         </nav>
       </div>
+      {/* Backdrop */}
+      {open && (
+        <div 
+          className="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity"
+          onClick={() => setOpen(false)}
+        />
+      )}
     </header>
   );
 }
