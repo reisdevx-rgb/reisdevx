@@ -48,7 +48,7 @@ function Index() {
           <ScrollReveal delay={100}>
             <h1 className="font-display font-black text-[clamp(3rem,11vw,11rem)] leading-[0.88] tracking-tighter pl-4 md:pl-8 lg:pl-12">
               <span className="block">ENGENHANDO</span>
-              <span className="block text-[var(--gold)]">IMPÉRIOS</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--accent)]">IMPÉRIOS</span>
               <span className="block">DIGITAIS</span>
             </h1>
           </ScrollReveal>
