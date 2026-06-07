@@ -22,15 +22,15 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <div className="font-mono-label text-background/40 mb-4">Contato</div>
-          <ul className="space-y-2 text-sm text-background/80">
+          <div className="font-mono-label text-foreground/40 mb-4">Contato</div>
+          <ul className="space-y-2 text-sm text-foreground/80">
             <li>reisdevx@gmail.com</li>
             <li>+55 73 9999-9999</li>
             <li>Itanhém, Brasil</li>
           </ul>
         </div>
       </div>
-      <div className="border-t border-background/10 py-6 text-center font-mono-label text-background/40">
+      <div className="border-t border-border py-6 text-center font-mono-label text-foreground/40">
         © {new Date().getFullYear()} ReisDevX — Todos os direitos reservados
       </div>
     </footer>
