@@ -109,7 +109,7 @@ function Index() {
           <StaggerReveal staggerDelay={120}>
             {pillars.map((p, i) => (
               <div key={p.t} className={`p-10 ${i > 0 ? "md:border-l border-border" : ""}`}>
-                <p.icon className="w-8 h-8 text-[var(--gold)]" strokeWidth={1.5} />
+                <p.icon className="w-8 h-8 text-[var(--primary)]" strokeWidth={1.5} />
                 <h3 className="font-display font-bold text-xl mt-6">{p.t}</h3>
                 <p className="text-muted-foreground mt-3 text-sm">{p.d}</p>
               </div>
