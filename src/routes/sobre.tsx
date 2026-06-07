@@ -71,8 +71,8 @@ function Sobre() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
             <StaggerReveal staggerDelay={100}>
               {principles.map((p) => (
-                <div key={p.t} className="bg-background p-10">
-                  <p.icon className="w-7 h-7 text-[var(--gold)]" strokeWidth={1.5} />
+                <div key={p.t} className="bg-[#111111] p-10 hover:bg-[#161616] transition-colors">
+                  <p.icon className="w-7 h-7 text-[var(--primary)]" strokeWidth={1.5} />
                   <h3 className="font-display font-bold text-xl mt-6">{p.t}</h3>
                   <p className="text-muted-foreground mt-3 text-sm">{p.d}</p>
                 </div>
