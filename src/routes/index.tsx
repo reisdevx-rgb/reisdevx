@@ -43,7 +43,7 @@ function Index() {
         <div className="absolute inset-0 opacity-[0.25] pointer-events-none mix-blend-overlay">
           <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80" alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border" />
+        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border/30" />
         <div className="relative mx-auto max-w-[1400px] w-full">
           <ScrollReveal delay={100}>
             <h1 className="font-display font-black text-[clamp(3rem,11vw,11rem)] leading-[0.88] tracking-tighter pl-4 md:pl-8 lg:pl-12">
