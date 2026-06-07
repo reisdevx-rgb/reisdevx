@@ -139,9 +139,9 @@ function Select({ label, value, onChange, options }: { label: string; value: str
 }
 function Row({ k, v }: { k: string; v: string }) {
   return (
-    <div className="flex justify-between gap-4 border-b border-background/15 pb-3">
-      <span className="text-background/60">{k}</span>
-      <span className="text-[var(--gold)] text-right truncate max-w-[60%]">{v || "—"}</span>
+    <div className="flex justify-between gap-4 border-b border-foreground/5 pb-3">
+      <span className="text-foreground/40">{k}</span>
+      <span className="text-[var(--primary)] text-right truncate max-w-[60%] font-bold">{v || "—"}</span>
     </div>
   );
 }
