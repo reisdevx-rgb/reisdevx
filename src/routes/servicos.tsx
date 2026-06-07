@@ -76,8 +76,8 @@ function Servicos() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
             <StaggerReveal staggerDelay={120}>
               {process.map((p) => (
-                <div key={p.n} className="bg-background p-10">
-                  <div className="font-display font-black text-5xl text-[var(--gold)]">{p.n}</div>
+                <div key={p.n} className="bg-[#111111] p-10 hover:bg-[#161616] transition-colors">
+                  <div className="font-display font-black text-5xl text-[var(--primary)]">{p.n}</div>
                   <h3 className="font-display font-bold text-xl mt-6">{p.t}</h3>
                   <p className="text-muted-foreground mt-3 text-sm">{p.d}</p>
                 </div>
