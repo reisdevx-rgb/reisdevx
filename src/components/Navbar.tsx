@@ -61,7 +61,7 @@ export function Navbar() {
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12 h-20 flex items-center justify-between">
 
         <Link to="/" className="font-display font-black text-xl tracking-tight relative z-50">
-          ReisDev<span className="text-[var(--gold)]">X</span>
+          ReisDev<span className="text-[var(--accent)]">X</span>
         </Link>
 
         {/* Desktop nav - Show on lg (1024px+) to keep tablet on mobile menu */}
