@@ -40,8 +40,8 @@ function Portfolio() {
       <section className="px-6 lg:px-12 py-24 md:py-32">
         <div className="mx-auto max-w-[1400px]">
           <ScrollReveal>
-            <div className="font-mono-label text-[var(--gold)] mb-6">Nossos trabalhos</div>
-            <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Portfólio <span className="text-[var(--gold)]">Selecionado</span></h1>
+            <div className="font-mono-label text-[var(--accent)] mb-6">Nossos trabalhos</div>
+            <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Portfólio <span className="text-[var(--primary)]">Selecionado</span></h1>
             <p className="text-lg text-muted-foreground mt-8 max-w-2xl">Estruturas digitais construídas com precisão arquitetônica. Clique em qualquer projeto para ver os detalhes completos.</p>
           </ScrollReveal>
           <ScrollReveal delay={150}>
