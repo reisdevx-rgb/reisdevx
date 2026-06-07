@@ -54,10 +54,10 @@ function Servicos() {
                     <div className="font-mono-label text-muted-foreground group-hover:text-background/60 mt-1">{s.s}</div>
                   </div>
                   <div className="hidden md:block">
-                    <div className="font-display font-black text-3xl text-[var(--gold)]">{s.m}</div>
-                    <div className="font-mono-label text-muted-foreground group-hover:text-background/60">{s.l}</div>
+                    <div className="font-display font-black text-3xl text-[var(--accent)] group-hover:text-[var(--primary)] transition-colors">{s.m}</div>
+                    <div className="font-mono-label text-muted-foreground">{s.l}</div>
                   </div>
-                  <ArrowRight className="w-5 h-5 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                  <ArrowRight className="w-5 h-5 text-[var(--primary)] opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                 </div>
               </div>
             ))}
