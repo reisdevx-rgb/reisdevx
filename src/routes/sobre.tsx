@@ -119,10 +119,10 @@ function Sobre() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <StaggerReveal staggerDelay={120}>
               {team.map((m) => (
-                <div key={m.n} className="border border-border p-8 hover:border-[var(--gold)] transition-colors">
-                  <div className="w-16 h-16 rounded-full bg-foreground text-background flex items-center justify-center font-display font-bold">{m.i}</div>
+                <div key={m.n} className="border border-border p-8 bg-[#111111] hover:border-[var(--primary)] transition-colors rounded-sm group">
+                  <div className="w-16 h-16 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold group-hover:shadow-[0_0_15px_rgba(0,102,255,0.3)] transition-all">{m.i}</div>
                   <h3 className="font-display font-bold text-xl mt-6">{m.n}</h3>
-                  <div className="font-mono-label text-[var(--gold)] mt-1">{m.r}</div>
+                  <div className="font-mono-label text-[var(--accent)] mt-1">{m.r}</div>
                   <p className="text-muted-foreground mt-4 text-sm">{m.d}</p>
                 </div>
               ))}
