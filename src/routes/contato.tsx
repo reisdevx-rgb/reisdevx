@@ -96,8 +96,8 @@ function Contato() {
       <section className="px-6 lg:px-12 py-24 border-t border-border">
         <div className="mx-auto max-w-[900px]">
           <ScrollReveal>
-            <div className="font-mono-label text-[var(--gold)] mb-4">Dúvidas frequentes</div>
-            <h2 className="font-display font-black text-5xl md:text-6xl">Perguntas <span className="text-[var(--gold)]">& Respostas</span></h2>
+            <div className="font-mono-label text-[var(--accent)] mb-4">Dúvidas frequentes</div>
+            <h2 className="font-display font-black text-5xl md:text-6xl">Perguntas <span className="text-[var(--primary)]">& Respostas</span></h2>
           </ScrollReveal>
           <div className="mt-12 border-t border-border">
             <StaggerReveal staggerDelay={100}>
