@@ -48,8 +48,8 @@ function Index() {
           <ScrollReveal delay={100}>
             <h1 className="font-display font-black text-[clamp(3rem,11vw,11rem)] leading-[0.88] tracking-tighter pl-4 md:pl-8 lg:pl-12 flex flex-col relative z-10">
               <span className="relative z-10">ENGENHANDO</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] relative z-30 -mt-[0.2em] -mb-[0.2em]">IMPÉRIOS</span>
-              <span className="relative z-20">DIGITAIS</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] relative z-20">IMPÉRIOS</span>
+              <span className="relative z-0">DIGITAIS</span>
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={300}>
