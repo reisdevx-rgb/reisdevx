@@ -40,8 +40,8 @@ function Sobre() {
         <div className="mx-auto max-w-[1400px] grid lg:grid-cols-2 gap-16 items-start">
           <ScrollReveal>
             <div>
-              <div className="font-mono-label text-[var(--gold)] mb-6">Quem somos</div>
-              <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Sobre a <span className="text-[var(--gold)]">ReisDevX</span></h1>
+              <div className="font-mono-label text-[var(--accent)] mb-6">Quem somos</div>
+              <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Sobre a <span className="text-[var(--primary)]">ReisDevX</span></h1>
               <p className="text-lg text-muted-foreground mt-8 max-w-xl">Somos um estúdio de desenvolvimento web premium, fundado com a missão de transformar negócios através de soluções digitais que dominam seu mercado.</p>
             </div>
           </ScrollReveal>
