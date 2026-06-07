@@ -64,9 +64,9 @@ function Contato() {
               </div>
               <div>
                 <label className="font-mono-label text-muted-foreground">Briefing do projeto *</label>
-                <textarea required rows={6} value={form.briefing} onChange={(e) => upd("briefing", e.target.value)} className="mt-2 w-full border border-border bg-background px-4 py-3 focus:border-[var(--gold)] outline-none" />
+                <textarea required rows={6} value={form.briefing} onChange={(e) => upd("briefing", e.target.value)} className="mt-2 w-full border border-border bg-background px-4 py-3 focus:border-[var(--primary)] outline-none rounded-sm transition-colors" />
               </div>
-              <button type="submit" className="bg-foreground text-background font-mono-label px-8 py-4 hover:bg-[var(--gold)] hover:text-foreground transition-colors">Enviar Briefing</button>
+              <button type="submit" className="w-full md:w-auto bg-[var(--primary)] text-white font-mono-label px-8 py-4 hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] transition-all rounded-sm">Enviar Briefing</button>
             </form>
           </ScrollReveal>
 
