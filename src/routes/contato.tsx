@@ -53,7 +53,7 @@ function Contato() {
       <section className="px-6 lg:px-12 pb-24">
         <div className="mx-auto max-w-[1400px] grid lg:grid-cols-[1.4fr_1fr] gap-12">
           <ScrollReveal>
-            <form onSubmit={(e) => { e.preventDefault(); alert("Briefing enviado!"); }} className="border border-border p-8 md:p-10 space-y-6">
+            <form onSubmit={(e) => { e.preventDefault(); alert("Briefing enviado!"); }} className="border border-border p-8 md:p-10 space-y-6 bg-[#111111]/30 backdrop-blur-sm rounded-sm">
               <div className="grid md:grid-cols-2 gap-6">
                 <Field label="Nome completo *" value={form.nome} onChange={(v) => upd("nome", v)} required />
                 <Field label="Email corporativo *" type="email" value={form.email} onChange={(v) => upd("email", v)} required />
