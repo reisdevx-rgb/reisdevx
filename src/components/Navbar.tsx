@@ -103,19 +103,19 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile/tablet dropdown panel - compact, anchored top-right */}
+      {/* Mobile/tablet slide-out panel - right to left */}
       <div
         ref={panelRef}
-        className={`lg:hidden absolute right-4 top-[4.5rem] w-72 max-w-[calc(100vw-2rem)] bg-background border border-border shadow-2xl origin-top-right transition-all duration-200 ${open ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}`}
+        className={`lg:hidden fixed top-0 right-0 h-screen w-80 max-w-[85vw] bg-background border-l border-border shadow-2xl transition-transform duration-300 ease-in-out ${open ? "translate-x-0" : "translate-x-full"}`}
       >
-        <nav className="flex flex-col p-2">
+        <nav className="flex flex-col p-6 pt-24 gap-4">
           {links.map((l) => {
             const active = pathname === l.to;
             return (
               <Link
                 key={l.to}
                 to={l.to}
-                className={`font-mono-label px-4 py-3 transition-colors ${active ? "text-[var(--accent)] bg-foreground/5" : "text-foreground/80 hover:text-foreground hover:bg-foreground/5"}`}
+                className={`font-mono-label text-lg py-2 border-b border-border/10 transition-colors ${active ? "text-[var(--accent)]" : "text-foreground/80 hover:text-foreground"}`}
               >
                 {l.label}
               </Link>
@@ -123,12 +123,19 @@ export function Navbar() {
           })}
           <Link
             to="/contato"
-            className="mt-2 bg-[var(--primary)] text-white font-mono-label px-4 py-3 text-center rounded-sm transition-all"
+            className="mt-4 bg-[var(--primary)] text-white font-mono-label px-4 py-4 text-center rounded-sm transition-all hover:shadow-[0_0_20px_rgba(0,102,255,0.4)]"
           >
             ORÇAMENTO
           </Link>
         </nav>
       </div>
+      {/* Backdrop */}
+      {open && (
+        <div 
+          className="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity"
+          onClick={() => setOpen(false)}
+        />
+      )}
     </header>
   );
 }
