@@ -124,10 +124,10 @@ function Index() {
           <ScrollReveal>
             <div className="flex flex-wrap items-end justify-between gap-6 mb-16">
               <div>
-                <div className="font-mono-label text-[var(--gold)] mb-4">Trabalhos Selecionados</div>
-                <h2 className="font-display font-black text-5xl md:text-7xl">Projetos em <span className="text-[var(--gold)]">Destaque</span></h2>
+                <div className="font-mono-label text-[var(--accent)] mb-4">Trabalhos Selecionados</div>
+                <h2 className="font-display font-black text-5xl md:text-7xl">Projetos em <span className="text-[var(--primary)]">Destaque</span></h2>
               </div>
-              <Link to="/portfolio" className="font-mono-label border-b border-foreground pb-1 hover:text-[var(--gold)] hover:border-[var(--gold)]">Ver todos os projetos →</Link>
+              <Link to="/portfolio" className="font-mono-label border-b border-[var(--primary)] pb-1 hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors">Ver todos os projetos →</Link>
             </div>
           </ScrollReveal>
       <StaggerReveal staggerDelay={120} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
