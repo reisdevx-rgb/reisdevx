@@ -40,8 +40,8 @@ function Index() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center px-6 lg:px-12 overflow-hidden">
 
-        <div className="absolute inset-0 opacity-[0.08] pointer-events-none">
-          <img src="https://media.base44.com/images/public/6a06181e699e1013b54b0ee8/172840bd6_generated_f86f8b28.png" alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 opacity-[0.25] pointer-events-none mix-blend-overlay">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80" alt="" className="w-full h-full object-cover" />
         </div>
         <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border" />
         <div className="relative mx-auto max-w-[1400px] w-full">
