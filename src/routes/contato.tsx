@@ -86,7 +86,7 @@ function Contato() {
                 <Row k="PRAZO" v={form.prazo} />
               </div>
               {!form.nome && !form.email && (
-                <div className="font-mono-label text-background/40 mt-10">Aguardando preenchimento</div>
+                <div className="font-mono-label text-foreground/20 mt-10">Aguardando preenchimento</div>
               )}
             </aside>
           </ScrollReveal>
