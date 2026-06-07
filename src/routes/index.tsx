@@ -46,10 +46,10 @@ function Index() {
         <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border/30" />
         <div className="relative mx-auto max-w-[1400px] w-full">
           <ScrollReveal delay={100}>
-            <h1 className="font-display font-black text-[clamp(3rem,11vw,11rem)] leading-[0.88] tracking-tighter pl-4 md:pl-8 lg:pl-12 flex flex-col">
-              <span>ENGENHANDO</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--accent)]">IMPÉRIOS</span>
-              <span>DIGITAIS</span>
+            <h1 className="font-display font-black text-[clamp(3rem,11vw,11rem)] leading-[0.88] tracking-tighter pl-4 md:pl-8 lg:pl-12 flex flex-col relative z-10">
+              <span className="relative z-20">ENGENHANDO</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] relative z-10">IMPÉRIOS</span>
+              <span className="relative z-0">DIGITAIS</span>
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={300}>
