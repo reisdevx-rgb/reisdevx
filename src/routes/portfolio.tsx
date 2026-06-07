@@ -66,12 +66,26 @@ function Portfolio() {
             {visible.map((p) => (
               <div 
                 key={p.n} 
-                className="group relative overflow-hidden bg-muted aspect-video cursor-pointer"
+                className="portfolio-card group aspect-video cursor-pointer"
                 onClick={() => setPreviewUrl(p.url)}
               >
-                <img src={p.img} alt={p.n} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
-                <div className="absolute inset-0 bg-[var(--primary)]/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                  <div className="bg-white text-[var(--primary)] font-mono-label px-6 py-3 rounded-sm font-bold shadow-xl">
+                <div className="portfolio-card-glow" />
+                <img src={p.img} alt={p.n} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 opacity-80 group-hover:opacity-100" />
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-100 transition-opacity">
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <span className="font-mono-label text-[var(--accent)] text-[10px] mb-1 block">{p.cat}</span>
+                    <h3 className="font-display font-bold text-xl">{p.n}</h3>
+                    <div className="flex gap-2 mt-2">
+                      {p.t.map(tag => (
+                        <span key={tag} className="text-[10px] px-2 py-0.5 border border-border rounded-full text-muted-foreground">{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="absolute inset-0 bg-[var(--primary)]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                  <div className="bg-white text-[var(--primary)] font-mono-label px-6 py-3 rounded-sm font-bold shadow-xl translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     VISUALIZAR MODELO
                   </div>
                 </div>
