@@ -31,8 +31,8 @@ function Servicos() {
         <div className="mx-auto max-w-[1400px] grid lg:grid-cols-2 gap-16 items-end">
           <ScrollReveal>
             <div>
-              <div className="font-mono-label text-[var(--gold)] mb-6">O que fazemos</div>
-              <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Nossos <span className="text-[var(--gold)]">Serviços</span></h1>
+              <div className="font-mono-label text-[var(--accent)] mb-6">O que fazemos</div>
+              <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Nossos <span className="text-[var(--primary)]">Serviços</span></h1>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={150}>
