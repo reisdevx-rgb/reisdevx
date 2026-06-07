@@ -73,7 +73,7 @@ function Index() {
         <StaggerReveal staggerDelay={120} className="mx-auto max-w-[1400px] grid grid-cols-2 md:grid-cols-4">
           {stats.map((s, i) => (
             <div key={s.l} className={`p-10 ${i > 0 ? "md:border-l border-border" : ""} ${i % 2 === 1 ? "border-l md:border-l" : ""} ${i >= 2 ? "border-t md:border-t-0" : ""}`}>
-              <div className="font-display font-black text-5xl text-[var(--gold)]">{s.n}</div>
+              <div className="font-display font-black text-5xl text-[var(--primary)]">{s.n}</div>
               <div className="font-mono-label mt-2 text-muted-foreground">{s.l}</div>
             </div>
           ))}
