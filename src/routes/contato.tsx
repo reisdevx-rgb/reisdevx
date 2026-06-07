@@ -122,7 +122,7 @@ function Field({ label, value, onChange, type = "text", required }: { label: str
   return (
     <div>
       <label className="font-mono-label text-muted-foreground">{label}</label>
-      <input required={required} type={type} value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full border border-border bg-background px-4 py-3 focus:border-[var(--gold)] outline-none" />
+      <input required={required} type={type} value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full border border-border bg-background px-4 py-3 focus:border-[var(--primary)] outline-none rounded-sm transition-colors" />
     </div>
   );
 }
@@ -130,7 +130,7 @@ function Select({ label, value, onChange, options }: { label: string; value: str
   return (
     <div>
       <label className="font-mono-label text-muted-foreground">{label}</label>
-      <select required value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full border border-border bg-background px-4 py-3 focus:border-[var(--gold)] outline-none">
+      <select required value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full border border-border bg-background px-4 py-3 focus:border-[var(--primary)] outline-none rounded-sm transition-colors">
         <option value="">Selecione...</option>
         {options.map((o) => <option key={o} value={o}>{o}</option>)}
       </select>
