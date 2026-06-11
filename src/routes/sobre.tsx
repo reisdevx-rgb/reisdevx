@@ -37,29 +37,29 @@ const team = [
 function Sobre() {
   return (
     <Shell>
-      <section className="px-6 lg:px-12 py-24 md:py-32 overflow-hidden">
-        <div className="mx-auto max-w-[1400px] grid lg:grid-cols-2 gap-16 items-center">
+      <section className="px-6 lg:px-12 py-16 md:py-32 overflow-hidden">
+        <div className="mx-auto max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <ScrollReveal>
-            <div>
+            <div className="relative z-10">
               <div className="font-mono-label text-[var(--accent)] mb-6">Quem somos</div>
               <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Sobre a <span className="text-[var(--primary)]">ReisDevX</span></h1>
               <p className="text-lg text-muted-foreground mt-8 max-w-xl">Somos um estúdio de desenvolvimento web premium, fundado com a missão de transformar negócios através de soluções digitais que dominam seu mercado.</p>
               
-              <div className="mt-12 border-l-2 border-[var(--primary)] pl-8 py-4 bg-[#111111]/50 backdrop-blur-sm">
-                <p className="font-display text-2xl md:text-3xl italic leading-snug">"Cada site que criamos é um instrumento de poder para o nosso cliente."</p>
+              <div className="mt-12 border-l-2 border-[var(--primary)] pl-6 md:pl-8 py-4 bg-[#111111]/50 backdrop-blur-sm">
+                <p className="font-display text-xl md:text-3xl italic leading-snug">"Cada site que criamos é um instrumento de poder para o nosso cliente."</p>
                 <div className="flex items-center gap-4 mt-8">
-                  <div className="w-14 h-14 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold text-xl">R</div>
+                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold text-lg md:text-xl">R</div>
                   <div>
-                    <div className="font-bold">Rafael Reis</div>
-                    <div className="font-mono-label text-muted-foreground">CEO & Fundador</div>
+                    <div className="font-bold text-sm md:text-base">Rafael Reis</div>
+                    <div className="font-mono-label text-muted-foreground text-xs md:text-sm">CEO & Fundador</div>
                   </div>
                 </div>
               </div>
             </div>
           </ScrollReveal>
           
-          <ScrollReveal delay={300} className="relative">
-            <div className="absolute inset-0 bg-radial-gradient from-[var(--primary)]/10 to-transparent blur-3xl rounded-full" />
+          <ScrollReveal delay={300} className="relative order-first lg:order-last">
+            <div className="absolute inset-0 bg-radial-gradient from-[var(--primary)]/10 to-transparent blur-3xl rounded-full scale-150" />
             <ThreeDPhone />
           </ScrollReveal>
         </div>
@@ -96,15 +96,15 @@ function Sobre() {
             </div>
           </ScrollReveal>
           <div className="relative">
-            <div className="absolute left-[80px] top-0 bottom-0 w-px bg-border hidden md:block" />
+            <div className="absolute left-[20px] md:left-[80px] top-0 bottom-0 w-px bg-border" />
             <StaggerReveal staggerDelay={100}>
               {timeline.map((t) => (
-                <div key={t.y} className="grid md:grid-cols-[100px_1fr] gap-6 md:gap-12 items-start">
-                  <div className="font-display font-black text-4xl text-[var(--primary)]">{t.y}</div>
-                  <div className="md:pl-8 relative">
-                    <div className="hidden md:block absolute -left-1 top-2 w-3 h-3 rounded-full bg-[var(--primary)]" />
-                    <h3 className="font-display font-bold text-2xl">{t.t}</h3>
-                    <p className="text-muted-foreground mt-2 max-w-2xl">{t.d}</p>
+                <div key={t.y} className="grid grid-cols-[50px_1fr] md:grid-cols-[100px_1fr] gap-4 md:gap-12 items-start mb-12 last:mb-0">
+                  <div className="font-display font-black text-xl md:text-4xl text-[var(--primary)] text-right pr-2 md:pr-0">{t.y}</div>
+                  <div className="pl-6 md:pl-8 relative">
+                    <div className="absolute -left-[31px] md:-left-[21px] top-2 w-2 h-2 md:w-3 md:h-3 rounded-full bg-[var(--primary)] border-4 border-[#0a0a0a]" />
+                    <h3 className="font-display font-bold text-xl md:text-2xl">{t.t}</h3>
+                    <p className="text-muted-foreground mt-2 text-sm md:text-base max-w-2xl">{t.d}</p>
                   </div>
                 </div>
               ))}
