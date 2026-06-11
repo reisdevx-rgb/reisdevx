@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shell } from "@/components/Shell";
 import { ScrollReveal, StaggerReveal } from "@/components/ScrollReveal";
+import { InteractiveDots } from "@/components/InteractiveDots";
 import { ArrowRight, ArrowDown, Zap, Shield, Award, HeartHandshake } from "lucide-react";
 import barbeariaImg from "@/assets/barbearia.png";
 import clinicaImg from "@/assets/clinica-medica.png";
+
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -39,6 +41,8 @@ function Index() {
     <Shell>
       {/* HERO */}
       <section className="relative min-h-screen flex items-center px-6 lg:px-12 overflow-hidden">
+        <InteractiveDots />
+
 
         <div className="absolute inset-0 opacity-[0.25] pointer-events-none mix-blend-overlay">
           <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80" alt="" className="w-full h-full object-cover" />
