@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shell } from "@/components/Shell";
 import { ScrollReveal, StaggerReveal } from "@/components/ScrollReveal";
 import { ArrowRight, Code2, Handshake, Globe2, Clock, Sparkles, Cpu } from "lucide-react";
+import { ThreeDPhone } from "@/components/ThreeDPhone";
 
 export const Route = createFileRoute("/sobre")({
   component: Sobre,
@@ -36,26 +37,30 @@ const team = [
 function Sobre() {
   return (
     <Shell>
-      <section className="px-6 lg:px-12 py-24 md:py-32">
-        <div className="mx-auto max-w-[1400px] grid lg:grid-cols-2 gap-16 items-start">
+      <section className="px-6 lg:px-12 py-24 md:py-32 overflow-hidden">
+        <div className="mx-auto max-w-[1400px] grid lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
             <div>
               <div className="font-mono-label text-[var(--accent)] mb-6">Quem somos</div>
               <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Sobre a <span className="text-[var(--primary)]">ReisDevX</span></h1>
               <p className="text-lg text-muted-foreground mt-8 max-w-xl">Somos um estúdio de desenvolvimento web premium, fundado com a missão de transformar negócios através de soluções digitais que dominam seu mercado.</p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <div className="border-l-2 border-[var(--primary)] pl-8 py-4 bg-[#111111]/50 backdrop-blur-sm">
-              <p className="font-display text-2xl md:text-3xl italic leading-snug">"Cada site que criamos é um instrumento de poder para o nosso cliente."</p>
-              <div className="flex items-center gap-4 mt-8">
-                <div className="w-14 h-14 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold text-xl">R</div>
-                <div>
-                  <div className="font-bold">Rafael Reis</div>
-                  <div className="font-mono-label text-muted-foreground">CEO & Fundador</div>
+              
+              <div className="mt-12 border-l-2 border-[var(--primary)] pl-8 py-4 bg-[#111111]/50 backdrop-blur-sm">
+                <p className="font-display text-2xl md:text-3xl italic leading-snug">"Cada site que criamos é um instrumento de poder para o nosso cliente."</p>
+                <div className="flex items-center gap-4 mt-8">
+                  <div className="w-14 h-14 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold text-xl">R</div>
+                  <div>
+                    <div className="font-bold">Rafael Reis</div>
+                    <div className="font-mono-label text-muted-foreground">CEO & Fundador</div>
+                  </div>
                 </div>
               </div>
             </div>
+          </ScrollReveal>
+          
+          <ScrollReveal delay={300} className="relative">
+            <div className="absolute inset-0 bg-radial-gradient from-[var(--primary)]/10 to-transparent blur-3xl rounded-full" />
+            <ThreeDPhone />
           </ScrollReveal>
         </div>
       </section>
