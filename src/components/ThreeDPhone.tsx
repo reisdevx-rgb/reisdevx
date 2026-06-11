@@ -17,6 +17,8 @@ function PhoneModel() {
     screen: new THREE.MeshStandardMaterial({ 
       map: texture,
       roughness: 0.1,
+      transparent: true,
+      side: THREE.DoubleSide
     }),
     frame: new THREE.MeshStandardMaterial({
       color: '#222222',
