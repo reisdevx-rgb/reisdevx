@@ -62,10 +62,10 @@ export function ThreeDPhone() {
   return (
     <div className="w-full h-[400px] md:h-[600px] relative">
       <Canvas shadows dpr={[1, 2]}>
-        <PerspectiveCamera makeDefault position={[0, 0, 12]} fov={35} />
-        <ambientLight intensity={0.5} />
-        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} castShadow />
-        <pointLight position={[-10, -10, -10]} intensity={0.5} />
+        <PerspectiveCamera makeDefault position={[0, 0, 15]} fov={35} />
+        <ambientLight intensity={1.5} />
+        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} castShadow />
+        <pointLight position={[-10, -10, -10]} intensity={1} />
         
         <Float speed={2} rotationIntensity={1.5} floatIntensity={1.5}>
           <PhoneModel />
