@@ -5,8 +5,8 @@ import * as THREE from 'three';
 
 function PhoneModel() {
   const meshRef = useRef<THREE.Group>(null);
-  // Using an image that resembles an Instagram/Social UI
-  const texture = useLoader(THREE.TextureLoader, 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1074&auto=format&fit=crop');
+  // Using the uploaded image for the phone screen
+  const texture = useLoader(THREE.TextureLoader, '/src/assets/phone-screen.png');
   
   const materials = useMemo(() => ({
     body: new THREE.MeshStandardMaterial({ 
