@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shell } from "@/components/Shell";
 import { ScrollReveal, StaggerReveal } from "@/components/ScrollReveal";
+import { InteractiveDots } from "@/components/InteractiveDots";
 import { ArrowRight, ArrowDown, Zap, Shield, Award, HeartHandshake } from "lucide-react";
 import barbeariaImg from "@/assets/barbearia.png";
 import clinicaImg from "@/assets/clinica-medica.png";
+
 
 export const Route = createFileRoute("/")({
   component: Index,
