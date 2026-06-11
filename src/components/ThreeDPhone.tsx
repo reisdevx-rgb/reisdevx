@@ -1,12 +1,12 @@
 import { useRef, useMemo } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { Float, PerspectiveCamera, Environment, ContactShadows } from '@react-three/drei';
 import * as THREE from 'three';
 
 function PhoneModel() {
   const meshRef = useRef<THREE.Group>(null);
+  const texture = useLoader(THREE.TextureLoader, 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1074&auto=format&fit=crop');
   
-  // Create geometry and materials for a generic 3D phone
   const materials = useMemo(() => ({
     body: new THREE.MeshStandardMaterial({ 
       color: '#1a1a1a', 
@@ -14,17 +14,15 @@ function PhoneModel() {
       metalness: 0.8 
     }),
     screen: new THREE.MeshStandardMaterial({ 
-      color: '#000000',
-      roughness: 0.05,
-      emissive: '#0066FF',
-      emissiveIntensity: 0.2
+      map: texture,
+      roughness: 0.1,
     }),
     frame: new THREE.MeshStandardMaterial({
       color: '#333333',
       metalness: 1,
       roughness: 0.2
     })
-  }), []);
+  }), [texture]);
 
   useFrame((state) => {
     if (!meshRef.current) return;
@@ -35,22 +33,23 @@ function PhoneModel() {
 
   return (
     <group ref={meshRef}>
-      {/* Phone Body */}
+      {/* Phone Body with rounded corners (using a cylinder-like box approximation or just a rounded box if we had the utility) */}
+      {/* For simplicity in vanilla Three.js without extra geo libs, we'll keep the box but simulate the look */}
       <mesh material={materials.body} castShadow receiveShadow>
         <boxGeometry args={[3.2, 6.5, 0.4]} />
       </mesh>
       
-      {/* Screen */}
+      {/* Screen with "Instagram" texture */}
       <mesh position={[0, 0, 0.21]} material={materials.screen}>
         <planeGeometry args={[3, 6.2]} />
       </mesh>
       
-      {/* Bezel/Frame detail */}
+      {/* Frame detail */}
       <mesh position={[0, 0, 0]} material={materials.frame}>
         <boxGeometry args={[3.3, 6.6, 0.38]} />
       </mesh>
 
-      {/* Camera Module on back */}
+      {/* Camera Module */}
       <mesh position={[0.8, 2.5, -0.21]} material={materials.frame}>
         <boxGeometry args={[1, 1, 0.1]} />
       </mesh>
