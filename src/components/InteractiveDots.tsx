@@ -12,7 +12,7 @@ export function InteractiveDots() {
 
     let width = 0;
     let height = 0;
-    let dots: { x: number; y: number; ox: number; oy: number; vx: number; vy: number }[] = [];
+    let dots: { x: number; y: number; ox: number; oy: number; vx: number; vy: number; phase: number }[] = [];
     let raf = 0;
 
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -40,7 +40,7 @@ export function InteractiveDots() {
         for (let j = 0; j < rows; j++) {
           const x = offsetX + i * spacing;
           const y = offsetY + j * spacing;
-          dots.push({ x, y, ox: x, oy: y, vx: 0, vy: 0 });
+          dots.push({ x, y, ox: x, oy: y, vx: 0, vy: 0, phase: Math.random() * Math.PI * 2 });
         }
       }
     };
@@ -55,24 +55,30 @@ export function InteractiveDots() {
       mouseRef.current.y = -9999;
     };
 
-    const tick = () => {
+    const tick = (time: number) => {
       ctx.clearRect(0, 0, width, height);
       const mx = mouseRef.current.x;
       const my = mouseRef.current.y;
 
       for (const d of dots) {
+        // Floating movement
+        const floatX = Math.sin(time * 0.001 + d.phase) * 3;
+        const floatY = Math.cos(time * 0.0008 + d.phase) * 3;
+        const targetX = d.ox + floatX;
+        const targetY = d.oy + floatY;
+
         const dx = d.x - mx;
         const dy = d.y - my;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < influence) {
-          const force = (1 - dist / influence) * 4;
+          const force = (1 - dist / influence) * 5;
           const angle = Math.atan2(dy, dx);
-          d.vx += Math.cos(angle) * force * 0.5;
-          d.vy += Math.sin(angle) * force * 0.5;
+          d.vx += Math.cos(angle) * force * 0.6;
+          d.vy += Math.sin(angle) * force * 0.6;
         }
-        // spring back
-        d.vx += (d.ox - d.x) * 0.04;
-        d.vy += (d.oy - d.y) * 0.04;
+        // spring back to floating target
+        d.vx += (targetX - d.x) * 0.04;
+        d.vy += (targetY - d.y) * 0.04;
         d.vx *= 0.82;
         d.vy *= 0.82;
         d.x += d.vx;
