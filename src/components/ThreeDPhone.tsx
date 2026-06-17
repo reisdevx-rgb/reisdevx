@@ -2,11 +2,11 @@ import { useRef, useMemo } from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { Float, PerspectiveCamera, Environment, ContactShadows } from '@react-three/drei';
 import * as THREE from 'three';
+import phoneScreenUrl from '@/assets/phone-screen.png';
 
 function PhoneModel() {
   const meshRef = useRef<THREE.Group>(null);
-  // Using the uploaded image for the phone screen
-  const texture = useLoader(THREE.TextureLoader, '/src/assets/phone-screen.png');
+  const texture = useLoader(THREE.TextureLoader, phoneScreenUrl);
   
   const materials = useMemo(() => ({
     body: new THREE.MeshStandardMaterial({ 
