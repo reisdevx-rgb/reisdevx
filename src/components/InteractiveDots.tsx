@@ -61,9 +61,9 @@ export function InteractiveDots() {
       const my = mouseRef.current.y;
 
       for (const d of dots) {
-        // Floating movement
-        const floatX = Math.sin(time * 0.001 + d.phase) * 3;
-        const floatY = Math.cos(time * 0.0008 + d.phase) * 3;
+        // Floating movement (more pronounced)
+        const floatX = Math.sin(time * 0.0018 + d.phase) * 10 + Math.cos(time * 0.0009 + d.phase * 1.7) * 5;
+        const floatY = Math.cos(time * 0.0015 + d.phase) * 10 + Math.sin(time * 0.0011 + d.phase * 1.3) * 5;
         const targetX = d.ox + floatX;
         const targetY = d.oy + floatY;
 
@@ -77,12 +77,13 @@ export function InteractiveDots() {
           d.vy += Math.sin(angle) * force * 0.6;
         }
         // spring back to floating target
-        d.vx += (targetX - d.x) * 0.04;
-        d.vy += (targetY - d.y) * 0.04;
-        d.vx *= 0.82;
-        d.vy *= 0.82;
+        d.vx += (targetX - d.x) * 0.03;
+        d.vy += (targetY - d.y) * 0.03;
+        d.vx *= 0.88;
+        d.vy *= 0.88;
         d.x += d.vx;
         d.y += d.vy;
+
 
         ctx.beginPath();
         ctx.arc(d.x, d.y, radius, 0, Math.PI * 2);
