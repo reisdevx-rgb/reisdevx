@@ -76,10 +76,27 @@ function Sobre() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
             <StaggerReveal staggerDelay={100}>
               {principles.map((p) => (
-                <div key={p.t} className="bg-[#111111] p-10 hover:bg-[#161616] transition-colors">
-                  <p.icon className="w-7 h-7 text-[var(--primary)]" strokeWidth={1.5} />
-                  <h3 className="font-display font-bold text-xl mt-6">{p.t}</h3>
-                  <p className="text-muted-foreground mt-3 text-sm">{p.d}</p>
+                <div key={p.t} className="group relative bg-[#111111] p-10 cursor-pointer transition-transform duration-500 hover:-translate-y-2">
+                  <div
+                    className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                    style={{
+                      background:
+                        "radial-gradient(circle at 50% 40%, color-mix(in oklab, var(--primary) 18%, transparent) 0%, transparent 70%)",
+                    }}
+                  />
+                  <div
+                    className="pointer-events-none absolute -inset-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl"
+                    style={{
+                      background:
+                        "radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--primary) 25%, transparent), transparent 60%)",
+                    }}
+                  />
+                  <p.icon
+                    className="relative w-7 h-7 text-[var(--primary)] transition-all duration-500 group-hover:scale-125 group-hover:rotate-6 group-hover:text-[var(--accent)] group-hover:drop-shadow-[0_0_12px_rgba(0,102,255,0.6)]"
+                    strokeWidth={1.5}
+                  />
+                  <h3 className="relative font-display font-bold text-xl mt-6 transition-colors duration-500 group-hover:text-[var(--primary)]">{p.t}</h3>
+                  <p className="relative text-muted-foreground mt-3 text-sm transition-colors duration-500 group-hover:text-foreground">{p.d}</p>
                 </div>
               ))}
             </StaggerReveal>
