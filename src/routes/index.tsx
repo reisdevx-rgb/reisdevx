@@ -114,10 +114,21 @@ function Index() {
             {pillars.map((p, i) => (
               <div
                 key={p.t}
-                className={`group relative p-10 overflow-hidden cursor-pointer transition-all duration-500 hover:bg-[var(--primary)]/5 hover:-translate-y-2 ${i > 0 ? "md:border-l border-border" : ""}`}
+                className={`group relative p-10 cursor-pointer transition-transform duration-500 hover:-translate-y-2 ${i > 0 ? "md:border-l border-border" : ""}`}
               >
-                <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
-                <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-[var(--primary)]/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                  style={{
+                    background:
+                      "radial-gradient(circle at 50% 40%, color-mix(in oklab, var(--primary) 18%, transparent) 0%, transparent 70%)",
+                  }}
+                />
+                <div className="pointer-events-none absolute -inset-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl"
+                  style={{
+                    background:
+                      "radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--primary) 25%, transparent), transparent 60%)",
+                  }}
+                />
                 <p.icon
                   className="w-8 h-8 text-[var(--primary)] transition-all duration-500 group-hover:scale-125 group-hover:rotate-6 group-hover:text-[var(--accent)] group-hover:drop-shadow-[0_0_12px_rgba(0,102,255,0.6)]"
                   strokeWidth={1.5}
