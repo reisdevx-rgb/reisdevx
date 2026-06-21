@@ -67,12 +67,12 @@ export function ThreeDPhone() {
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} castShadow />
         <pointLight position={[-10, -10, -10]} intensity={1} />
         
-        <Float speed={2} rotationIntensity={1.5} floatIntensity={1.5}>
-          <PhoneModel />
-        </Float>
-        
+        <PhoneModel />
+
+        <OrbitControls enablePan={false} enableZoom={false} enableDamping dampingFactor={0.1} rotateSpeed={0.8} />
         <Environment preset="city" />
         <ContactShadows position={[0, -4.5, 0]} opacity={0.4} scale={20} blur={2} far={4.5} />
+
       </Canvas>
     </div>
   );
