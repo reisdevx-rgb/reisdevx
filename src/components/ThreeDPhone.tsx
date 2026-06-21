@@ -1,41 +1,34 @@
-import { useRef, useMemo } from 'react';
-import { Canvas, useFrame, useLoader } from '@react-three/fiber';
-import { Float, PerspectiveCamera, Environment, ContactShadows } from '@react-three/drei';
+import { useMemo } from 'react';
+import { Canvas, useLoader } from '@react-three/fiber';
+import { OrbitControls, Environment, ContactShadows } from '@react-three/drei';
 import * as THREE from 'three';
 import phoneScreenUrl from '@/assets/phone-screen.png';
 
 function PhoneModel() {
-  const meshRef = useRef<THREE.Group>(null);
   const texture = useLoader(THREE.TextureLoader, phoneScreenUrl);
-  
+
   const materials = useMemo(() => ({
-    body: new THREE.MeshStandardMaterial({ 
-      color: '#0a0a0a', 
-      roughness: 0.1, 
-      metalness: 0.9 
+    body: new THREE.MeshStandardMaterial({
+      color: '#0a0a0a',
+      roughness: 0.1,
+      metalness: 0.9,
     }),
-    screen: new THREE.MeshStandardMaterial({ 
+    screen: new THREE.MeshStandardMaterial({
       map: texture,
       roughness: 0.1,
       transparent: true,
-      side: THREE.DoubleSide
+      side: THREE.DoubleSide,
     }),
     frame: new THREE.MeshStandardMaterial({
       color: '#222222',
       metalness: 1,
-      roughness: 0.1
-    })
+      roughness: 0.1,
+    }),
   }), [texture]);
 
-  useFrame((state) => {
-    if (!meshRef.current) return;
-    const t = state.clock.getElapsedTime();
-    meshRef.current.rotation.y = Math.sin(t * 0.5) * 0.2;
-    meshRef.current.rotation.x = Math.cos(t * 0.3) * 0.1;
-  });
-
   return (
-    <group ref={meshRef}>
+    <group>
+
       {/* Rounded Phone Body */}
       <mesh material={materials.body} castShadow receiveShadow>
         <extrudeGeometry args={[
