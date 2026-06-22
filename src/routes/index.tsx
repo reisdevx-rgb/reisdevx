@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
 });
 
 const stats = [
-  { n: "120+", l: "Projetos Entregues" },
+  { n: "120+", l: "ATENDIMENTO PERSONALIZADO" },
   { n: "98%", l: "Satisfação" },
   { n: "5+", l: "Anos de Experiência" },
   { n: "50+", l: "Clientes Ativos" },
