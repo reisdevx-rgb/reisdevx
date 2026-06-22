@@ -79,7 +79,7 @@ function Index() {
       <section className="border-y border-border">
         <StaggerReveal staggerDelay={120} className="mx-auto max-w-[1400px] grid grid-cols-2 md:grid-cols-4">
           {stats.map((s, i) => (
-            <div key={s.l} className={`p-10 ${i > 0 ? "md:border-l border-border" : ""} ${i % 2 === 1 ? "border-l md:border-l" : ""} ${i >= 2 ? "border-t md:border-t-0" : ""}`}>
+            <div key={s.l} className={`p-10 flex flex-col items-center justify-center text-center ${i > 0 ? "md:border-l border-border" : ""} ${i % 2 === 1 ? "border-l md:border-l" : ""} ${i >= 2 ? "border-t md:border-t-0" : ""}`}>
               {s.n === "icon" ? (
                 <img src={atendenteAsset.url} alt="Atendimento" className="w-14 h-14 object-contain" />
               ) : (
