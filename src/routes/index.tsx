@@ -168,7 +168,7 @@ function Index() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 lg:px-12 py-32 border-t border-border bg-card text-foreground relative overflow-hidden">
+      <section className="px-6 lg:px-12 py-32 border-t border-border bg-[#111111] text-foreground relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[var(--primary)]/10 blur-[120px] rounded-full pointer-events-none" />
         <div className="mx-auto max-w-[1400px] text-center relative z-10">
           <ScrollReveal>
