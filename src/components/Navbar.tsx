@@ -1,6 +1,8 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
+
 
 const links = [
   { to: "/", label: "INÍCIO" },
@@ -82,6 +84,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
+          <ThemeToggle />
           <Link
             to="/contato"
             className="bg-[var(--primary)] text-white font-mono-label px-5 py-3 hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] transition-all rounded-sm"
@@ -91,16 +94,21 @@ export function Navbar() {
           </Link>
         </div>
 
+
         {/* Mobile/tablet trigger - Show below lg */}
-        <button
-          ref={buttonRef}
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-          className="lg:hidden relative z-50 w-11 h-11 flex items-center justify-center border border-border hover:border-foreground transition-colors"
-        >
-          {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+        <div className="lg:hidden flex items-center gap-2 relative z-50">
+          <ThemeToggle />
+          <button
+            ref={buttonRef}
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="w-11 h-11 flex items-center justify-center border border-border hover:border-foreground transition-colors"
+          >
+            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
+
       </div>
 
       {/* Mobile/tablet slide-out panel - right to left */}
