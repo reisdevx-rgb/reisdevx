@@ -45,7 +45,7 @@ function Sobre() {
               <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Sobre a <span className="text-[var(--primary)]">ReisDevX</span></h1>
               <p className="text-lg text-muted-foreground mt-8 max-w-xl">Somos um estúdio de desenvolvimento web premium, fundado com a missão de transformar negócios através de soluções digitais que dominam seu mercado.</p>
               
-              <div className="mt-12 border-l-2 border-[var(--primary)] pl-6 md:pl-8 py-4 bg-[#111111]/50 backdrop-blur-sm">
+              <div className="mt-12 border-l-2 border-[var(--primary)] pl-6 md:pl-8 py-4 bg-card/50 backdrop-blur-sm">
                 <p className="font-display text-xl md:text-3xl italic leading-snug">"Cada site que criamos é um instrumento de poder para o nosso cliente."</p>
                 <div className="flex items-center gap-4 mt-8">
                   <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold text-lg md:text-xl">R</div>
@@ -76,7 +76,7 @@ function Sobre() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
             <StaggerReveal staggerDelay={100}>
               {principles.map((p) => (
-                <div key={p.t} className="group relative bg-[#111111] p-10 cursor-pointer transition-transform duration-500 hover:-translate-y-2">
+                <div key={p.t} className="group relative bg-card p-10 cursor-pointer transition-transform duration-500 hover:-translate-y-2">
                   <div
                     className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                     style={{
@@ -141,7 +141,7 @@ function Sobre() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <StaggerReveal staggerDelay={120}>
               {team.map((m) => (
-                <div key={m.n} className="border border-border p-8 bg-[#111111] hover:border-[var(--primary)] transition-colors rounded-sm group">
+                <div key={m.n} className="border border-border p-8 bg-card hover:border-[var(--primary)] transition-colors rounded-sm group">
                   <div className="w-16 h-16 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold group-hover:shadow-[0_0_15px_rgba(0,102,255,0.3)] transition-all">{m.i}</div>
                   <h3 className="font-display font-bold text-xl mt-6">{m.n}</h3>
                   <div className="font-mono-label text-[var(--accent)] mt-1">{m.r}</div>

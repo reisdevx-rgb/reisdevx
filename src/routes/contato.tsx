@@ -39,7 +39,7 @@ function Contato() {
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
             <StaggerReveal staggerDelay={100}>
               {info.map((i) => (
-                <div key={i.t} className="bg-[#111111] p-8 hover:bg-[#161616] transition-colors">
+                <div key={i.t} className="bg-card p-8 hover:bg-secondary transition-colors">
                   <i.icon className="w-6 h-6 text-[var(--primary)]" strokeWidth={1.5} />
                   <div className="font-mono-label text-muted-foreground mt-6">{i.t}</div>
                   <div className="font-display font-bold text-lg mt-1">{i.v}</div>
@@ -53,7 +53,7 @@ function Contato() {
       <section className="px-6 lg:px-12 pb-24">
         <div className="mx-auto max-w-[1400px] grid lg:grid-cols-[1.4fr_1fr] gap-12">
           <ScrollReveal>
-            <form onSubmit={(e) => { e.preventDefault(); alert("Briefing enviado!"); }} className="border border-border p-8 md:p-10 space-y-6 bg-[#111111]/30 backdrop-blur-sm rounded-sm">
+            <form onSubmit={(e) => { e.preventDefault(); alert("Briefing enviado!"); }} className="border border-border p-8 md:p-10 space-y-6 bg-card/30 backdrop-blur-sm rounded-sm">
               <div className="grid md:grid-cols-2 gap-6">
                 <Field label="Nome completo *" value={form.nome} onChange={(v) => upd("nome", v)} required />
                 <Field label="Email corporativo *" type="email" value={form.email} onChange={(v) => upd("email", v)} required />
@@ -71,7 +71,7 @@ function Contato() {
           </ScrollReveal>
 
           <ScrollReveal delay={150}>
-            <aside className="bg-[#111111] text-foreground p-8 md:p-10 self-start border border-border rounded-sm relative overflow-hidden">
+            <aside className="bg-card text-foreground p-8 md:p-10 self-start border border-border rounded-sm relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--primary)]/5 blur-[40px] rounded-full" />
               <div className="relative z-10 flex items-center justify-between">
                 <div className="font-mono-label text-[var(--accent)]">Manifesto do Projeto</div>
