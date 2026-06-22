@@ -5,8 +5,6 @@ import { InteractiveDots } from "@/components/InteractiveDots";
 import { ArrowRight, ArrowDown, Zap, Shield, Award, HeartHandshake } from "lucide-react";
 import barbeariaImg from "@/assets/barbearia.png";
 import clinicaImg from "@/assets/clinica-medica.png";
-import atendenteAsset from "@/assets/atendente.png.asset.json";
-
 
 
 export const Route = createFileRoute("/")({
@@ -20,12 +18,11 @@ export const Route = createFileRoute("/")({
 });
 
 const stats = [
-  { n: "icon", l: "Atendimento Personalizado" },
+  { n: "120+", l: "Projetos Entregues" },
   { n: "98%", l: "Satisfação" },
   { n: "5+", l: "Anos de Experiência" },
   { n: "50+", l: "Clientes Ativos" },
 ];
-
 
 const pillars = [
   { icon: Zap, t: "Performance A+", d: "Sites com carregamento abaixo de 1.5 segundos e Core Web Vitals perfeitos." },
@@ -79,12 +76,8 @@ function Index() {
       <section className="border-y border-border">
         <StaggerReveal staggerDelay={120} className="mx-auto max-w-[1400px] grid grid-cols-2 md:grid-cols-4">
           {stats.map((s, i) => (
-            <div key={s.l} className={`p-10 flex flex-col items-center justify-center text-center ${i > 0 ? "md:border-l border-border" : ""} ${i % 2 === 1 ? "border-l md:border-l" : ""} ${i >= 2 ? "border-t md:border-t-0" : ""}`}>
-              {s.n === "icon" ? (
-                <img src={atendenteAsset.url} alt="Atendimento" className="w-14 h-14 object-contain" />
-              ) : (
-                <div className="font-display font-black text-5xl text-[var(--primary)]">{s.n}</div>
-              )}
+            <div key={s.l} className={`p-10 ${i > 0 ? "md:border-l border-border" : ""} ${i % 2 === 1 ? "border-l md:border-l" : ""} ${i >= 2 ? "border-t md:border-t-0" : ""}`}>
+              <div className="font-display font-black text-5xl text-[var(--primary)]">{s.n}</div>
               <div className="font-mono-label mt-2 text-muted-foreground">{s.l}</div>
             </div>
           ))}
