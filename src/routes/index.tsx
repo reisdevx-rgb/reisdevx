@@ -6,6 +6,7 @@ import { ArrowRight, ArrowDown, Zap, Shield, Award, HeartHandshake } from "lucid
 import barbeariaImg from "@/assets/barbearia.png";
 import clinicaImg from "@/assets/clinica-medica.png";
 import atendenteAsset from "@/assets/atendente.png.asset.json";
+import devicesAsset from "@/assets/devices.png.asset.json";
 
 
 
@@ -21,7 +22,7 @@ export const Route = createFileRoute("/")({
 
 const stats: { n?: string; icon?: string; l: string }[] = [
   { icon: atendenteAsset.url, l: "ATENDIMENTO PERSONALIZADO" },
-  { n: "98%", l: "Satisfação" },
+  { icon: devicesAsset.url, l: "Satisfação" },
   { n: "5+", l: "Anos de Experiência" },
   { n: "50+", l: "Clientes Ativos" },
 ];
@@ -79,7 +80,7 @@ function Index() {
       <section className="border-y border-border">
         <StaggerReveal staggerDelay={120} className="mx-auto max-w-[1400px] grid grid-cols-2 md:grid-cols-4">
           {stats.map((s, i) => (
-            <div key={s.l} className={`p-10 ${i > 0 ? "md:border-l border-border" : ""} ${i % 2 === 1 ? "border-l md:border-l" : ""} ${i >= 2 ? "border-t md:border-t-0" : ""}`}>
+            <div key={s.l} className={`p-10 flex flex-col items-center text-center ${i > 0 ? "md:border-l border-border" : ""} ${i % 2 === 1 ? "border-l md:border-l" : ""} ${i >= 2 ? "border-t md:border-t-0" : ""}`}>
               {s.icon ? (
                 <img src={s.icon} alt={s.l} className="w-14 h-14 object-contain" />
               ) : (
