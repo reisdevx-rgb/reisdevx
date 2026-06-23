@@ -132,31 +132,8 @@ function Sobre() {
 
       <section className="px-6 lg:px-12 py-24 border-t border-border">
         <div className="mx-auto max-w-[1400px]">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <StaggerReveal staggerDelay={120}>
-              {team.map((m) => (
-                <div
-                  key={m.n}
-                  className="relative overflow-hidden border border-border p-8 bg-card rounded-sm group cursor-pointer transition-all duration-500 hover:border-[var(--primary)] hover:shadow-[0_20px_40px_-15px_rgba(0,102,255,0.4)]"
-                >
-                  {/* Expanding ink fill from the avatar */}
-                  <div
-                    aria-hidden
-                    className="pointer-events-none absolute top-8 left-8 w-16 h-16 rounded-full bg-[var(--primary)] scale-0 group-hover:scale-[14] transition-transform duration-700 ease-out origin-center"
-                  />
-                  <div className="relative z-10 w-16 h-16 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold transition-all duration-500 group-hover:bg-white group-hover:text-[var(--primary)] group-hover:rotate-[360deg]">
-                    {m.i}
-                  </div>
-                  <h3 className="relative z-10 font-display font-bold text-xl mt-6 transition-colors duration-500 group-hover:text-white">{m.n}</h3>
-                  <div className="relative z-10 font-mono-label text-[var(--accent)] mt-1 transition-colors duration-500 group-hover:text-white">{m.r}</div>
-                  <p className="relative z-10 text-muted-foreground mt-4 text-sm transition-colors duration-500 group-hover:text-white/90">{m.d}</p>
-                </div>
-              ))}
-            </StaggerReveal>
-          </div>
-
           <ScrollReveal>
-            <div className="mt-24 relative overflow-hidden border border-border bg-card rounded-sm">
+            <div className="relative overflow-hidden border border-border bg-card rounded-sm">
               <div className="absolute top-0 left-0 w-1 h-full bg-[var(--primary)]" />
               <div className="absolute -top-32 -right-32 w-96 h-96 bg-[var(--primary)]/10 blur-3xl rounded-full pointer-events-none" />
               <div className="relative grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 p-8 md:p-12 items-start">
@@ -193,6 +170,29 @@ function Sobre() {
               </div>
             </div>
           </ScrollReveal>
+
+          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <StaggerReveal staggerDelay={120}>
+              {team.map((m) => (
+                <div
+                  key={m.n}
+                  className="relative overflow-hidden border border-border p-8 bg-card rounded-sm group cursor-pointer transition-all duration-500 hover:border-[var(--primary)] hover:shadow-[0_20px_40px_-15px_rgba(0,102,255,0.4)]"
+                >
+                  {/* Expanding ink fill from the avatar */}
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute top-8 left-8 w-16 h-16 rounded-full bg-[var(--primary)] scale-0 group-hover:scale-[14] transition-transform duration-700 ease-out origin-center"
+                  />
+                  <div className="relative z-10 w-16 h-16 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold transition-all duration-500 group-hover:bg-white group-hover:text-[var(--primary)] group-hover:rotate-[360deg]">
+                    {m.i}
+                  </div>
+                  <h3 className="relative z-10 font-display font-bold text-xl mt-6 transition-colors duration-500 group-hover:text-white">{m.n}</h3>
+                  <div className="relative z-10 font-mono-label text-[var(--accent)] mt-1 transition-colors duration-500 group-hover:text-white">{m.r}</div>
+                  <p className="relative z-10 text-muted-foreground mt-4 text-sm transition-colors duration-500 group-hover:text-white/90">{m.d}</p>
+                </div>
+              ))}
+            </StaggerReveal>
+          </div>
         </div>
       </section>
 
