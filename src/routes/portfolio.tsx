@@ -64,20 +64,21 @@ function Portfolio() {
         <div className="mx-auto max-w-[1400px] grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <StaggerReveal staggerDelay={100}>
             {visible.map((p) => (
-              <div 
-                key={p.n} 
-                className="portfolio-card group aspect-video cursor-pointer"
+              <button
+                key={p.n}
+                type="button"
                 onClick={() => setPreviewUrl(p.url)}
+                className="group block text-left w-full"
               >
-                <div className="portfolio-card-glow" />
-                <img src={p.img} alt={p.n} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
-
-                <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[var(--primary)] py-5 flex items-center justify-center">
-                  <div className="bg-white text-[var(--primary)] font-mono-label px-6 py-3 rounded-sm font-bold shadow-xl">
-                    VISUALIZAR MODELO
+                <div className="relative aspect-video overflow-hidden bg-muted rounded-sm">
+                  <img src={p.img} alt={p.n} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
+                  <div className="absolute inset-0 bg-[var(--primary)]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                    <div className="bg-white text-[var(--primary)] font-mono-label px-6 py-3 rounded-sm font-bold shadow-xl translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      VISUALIZAR MODELO
+                    </div>
                   </div>
                 </div>
-              </div>
+              </button>
             ))}
           </StaggerReveal>
         </div>
