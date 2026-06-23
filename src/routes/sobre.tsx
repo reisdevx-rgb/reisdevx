@@ -38,15 +38,15 @@ function Sobre() {
   return (
     <Shell>
       <section className="px-6 lg:px-12 py-16 md:py-32 overflow-hidden">
-        <div className="mx-auto max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="mx-auto max-w-[1400px] grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
           <ScrollReveal>
             <div className="relative z-10">
               <div className="font-mono-label text-[var(--accent)] mb-6">Quem somos</div>
-              <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Sobre a <span className="text-[var(--primary)]">ReisDevX</span></h1>
-              <p className="text-lg text-muted-foreground mt-8 max-w-xl">Somos um estúdio de desenvolvimento web premium, fundado com a missão de transformar negócios através de soluções digitais que dominam seu mercado.</p>
+              <h1 className="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.95]">Sobre a <span className="text-[var(--primary)]">ReisDevX</span></h1>
+              <p className="text-base md:text-lg text-muted-foreground mt-8 max-w-xl">Somos um estúdio de desenvolvimento web premium, fundado com a missão de transformar negócios através de soluções digitais que dominam seu mercado.</p>
               
               <div className="mt-12 border-l-2 border-[var(--primary)] pl-6 md:pl-8 py-4 bg-card/50 backdrop-blur-sm">
-                <p className="font-display text-xl md:text-3xl italic leading-snug">"Cada site que criamos é um instrumento de poder para o nosso cliente."</p>
+                <p className="font-display text-lg md:text-2xl lg:text-3xl italic leading-snug">"Cada site que criamos é um instrumento de poder para o nosso cliente."</p>
                 <div className="flex items-center gap-4 mt-8">
                   <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold text-lg md:text-xl">R</div>
                   <div>
@@ -58,7 +58,7 @@ function Sobre() {
             </div>
           </ScrollReveal>
           
-          <ScrollReveal delay={300} className="relative order-first lg:order-last">
+          <ScrollReveal delay={300} className="relative order-first md:order-last w-full max-w-sm mx-auto md:max-w-none">
             <div className="absolute inset-0 bg-radial-gradient from-[var(--primary)]/10 to-transparent blur-3xl rounded-full scale-150" />
             <ThreeDPhone />
           </ScrollReveal>
