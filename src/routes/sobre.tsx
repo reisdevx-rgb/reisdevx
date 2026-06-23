@@ -115,11 +115,11 @@ function Sobre() {
           </ScrollReveal>
           <div className="relative">
             <div className="absolute left-[20px] md:left-[80px] top-0 bottom-0 w-px bg-border" />
-            <StaggerReveal staggerDelay={100}>
-              {timeline.map((t) => (
-                <div key={t.y} className="grid grid-cols-[50px_1fr] md:grid-cols-[100px_1fr] gap-4 md:gap-12 items-start mb-12 last:mb-0">
+            <StaggerReveal staggerDelay={100} itemClassName="block">
+              {timeline.map((t, i) => (
+                <div key={t.y} className={`grid grid-cols-[50px_1fr] md:grid-cols-[100px_1fr] gap-4 md:gap-12 items-start ${i !== timeline.length - 1 ? "mb-12" : ""}`}>
                   <div className="font-display font-black text-xl md:text-4xl text-[var(--primary)] text-right pr-2 md:pr-0">{t.y}</div>
-                  <div className="pl-6 md:pl-8 relative">
+                  <div className="pl-6 md:pl-8 relative min-h-[88px] md:min-h-[96px]">
                     <div className="absolute -left-[31px] md:-left-[21px] top-2 w-2 h-2 md:w-3 md:h-3 rounded-full bg-[var(--primary)] border-4 border-[#0a0a0a]" />
                     <h3 className="font-display font-bold text-xl md:text-2xl">{t.t}</h3>
                     <p className="text-muted-foreground mt-2 text-sm md:text-base max-w-2xl">{t.d}</p>
@@ -128,6 +128,7 @@ function Sobre() {
               ))}
             </StaggerReveal>
           </div>
+
         </div>
       </section>
 
