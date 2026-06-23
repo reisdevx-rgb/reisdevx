@@ -19,13 +19,13 @@ const principles = [
 ];
 
 const timeline = [
-  { y: "2019", t: "Fundação", d: "ReisDevX nasce da visão de criar sites que são verdadeiras obras de engenharia digital." },
-  { y: "2020", t: "Primeiros 10 Clientes", d: "Consolidamos nossa metodologia e entregamos os primeiros projetos de alto impacto." },
-  { y: "2021", t: "Expansão da Equipe", d: "Crescemos para um time multidisciplinar de especialistas em design, dev e estratégia." },
-  { y: "2022", t: "Projetos SaaS", d: "Entrada no mercado de plataformas SaaS complexas com arquiteturas escaláveis." },
-  { y: "2023", t: "50+ Projetos Entregues", d: "Marco histórico de 50 projetos entregues com 98% de satisfação dos clientes." },
-  { y: "2026", t: "Presente", d: "Referência no mercado, com 120+ projetos e parcerias com empresas líderes de segmento." },
+  { y: "1", t: "Descoberta", d: "Entendemos seus objetivos, público-alvo e necessidades para criar uma solução alinhada ao seu negócio." },
+  { y: "2", t: "Planejamento", d: "Estruturamos a estratégia, o design e a arquitetura do projeto para garantir eficiência e resultados." },
+  { y: "3", t: "Desenvolvimento", d: "Transformamos a ideia em uma experiência digital moderna, rápida e responsiva." },
+  { y: "4", t: "Refinamento", d: "Realizamos ajustes, otimizações e testes para garantir qualidade máxima." },
+  { y: "5", t: "Entrega", d: "Publicamos o projeto e oferecemos suporte para que tudo funcione perfeitamente." },
 ];
+
 
 const team = [
   { n: "Desenvolvimento Web", r: "Sites modernos e responsivos", d: "Criação de sites modernos, rápidos e responsivos, desenvolvidos para oferecer a melhor experiência em qualquer dispositivo." },
@@ -108,8 +108,9 @@ function Sobre() {
         <div className="mx-auto max-w-[1400px]">
           <ScrollReveal>
             <div className="mb-16">
-              <div className="font-mono-label text-[var(--accent)] mb-4">Nossa Jornada</div>
-              <h2 className="font-display font-black text-5xl md:text-6xl">Uma história de <span className="text-[var(--primary)]">evolução</span></h2>
+              <div className="font-mono-label text-[var(--accent)] mb-4">Nosso Processo</div>
+              <h2 className="font-display font-black text-5xl md:text-6xl">Como <span className="text-[var(--primary)]">Trabalhamos</span></h2>
+
             </div>
           </ScrollReveal>
           <div className="relative">
