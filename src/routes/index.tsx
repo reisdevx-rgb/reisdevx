@@ -25,7 +25,7 @@ const stats: { n?: string; icon?: string; l: string }[] = [
   { icon: atendenteAsset.url, l: "ATENDIMENTO PERSONALIZADO" },
   { icon: devicesAsset.url, l: "SITES MODERNOS E RESPONSIVOS" },
   { icon: raioAsset.url, l: "FOCO EM PERFORMANCE E SEO" },
-  { n: "50+", l: "Clientes Ativos" },
+  { n: "50+", l: "SUPORTE DEDICADO" },
 ];
 
 
