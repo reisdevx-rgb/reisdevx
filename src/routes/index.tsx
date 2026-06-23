@@ -173,17 +173,28 @@ function Index() {
           </ScrollReveal>
       <StaggerReveal staggerDelay={120} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((p) => (
-          <Link key={p.name} to="/portfolio" className="group block">
-            <div className="aspect-[4/3] overflow-hidden bg-muted rounded-sm">
+          <button
+            key={p.name}
+            type="button"
+            onClick={() => setPreviewUrl(p.url)}
+            className="group block text-left"
+          >
+            <div className="relative aspect-[4/3] overflow-hidden bg-muted rounded-sm">
               <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
+              <div className="absolute inset-0 bg-[var(--primary)]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                <div className="bg-white text-[var(--primary)] font-mono-label px-6 py-3 rounded-sm font-bold shadow-xl translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  VISUALIZAR MODELO
+                </div>
+              </div>
             </div>
             <h3 className="font-display font-bold text-xl mt-4">{p.name}</h3>
             <div className="font-mono-label text-muted-foreground mt-1 text-sm">{p.tag}</div>
-          </Link>
+          </button>
         ))}
       </StaggerReveal>
         </div>
       </section>
+
 
       {/* CTA */}
       <section className="px-6 lg:px-12 py-32 border-t border-border bg-card text-foreground relative overflow-hidden">
