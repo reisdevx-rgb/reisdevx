@@ -28,10 +28,10 @@ const timeline = [
 ];
 
 const team = [
-  { i: "RR", n: "Rafael Reis", r: "CEO & Lead Developer", d: "Arquiteto de sistemas com 8+ anos construindo produtos digitais de escala global." },
-  { i: "AL", n: "Ana Lima", r: "UI/UX Designer", d: "Especialista em design de experiências que mesclam beleza editorial e conversão." },
-  { i: "BS", n: "Bruno Santos", r: "Full-Stack Engineer", d: "Engenheiro focado em performance, escalabilidade e soluções de back-end robustas." },
-  { i: "CM", n: "Carla Mendes", r: "Gestora de Projetos", d: "Garante que cada entrega seja no prazo, dentro do orçamento e além das expectativas." },
+  { n: "Desenvolvimento Web", r: "Sites modernos e responsivos", d: "Criação de sites modernos, rápidos e responsivos, desenvolvidos para oferecer a melhor experiência em qualquer dispositivo." },
+  { n: "Design UI/UX", r: "Interfaces que convertem", d: "Interfaces elegantes e intuitivas, projetadas para melhorar a experiência do usuário e aumentar a conversão." },
+  { n: "Performance & SEO", r: "Velocidade e visibilidade", d: "Otimização de velocidade, estrutura técnica e SEO para melhorar o posicionamento nos mecanismos de busca." },
+  { n: "Atendimento Personalizado", r: "Acompanhamento dedicado", d: "Acompanhamento direto em todas as etapas do projeto, garantindo comunicação clara e resultados alinhados aos seus objetivos." },
 ];
 
 function Sobre() {
