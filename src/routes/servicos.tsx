@@ -46,11 +46,11 @@ function Servicos() {
           <StaggerReveal staggerDelay={80}>
             {services.map((s) => (
               <div key={s.n} className="border-b border-border group hover:bg-card transition-colors">
-                <div className="px-6 lg:px-12 py-10 grid grid-cols-[80px_50px_1fr_auto] md:grid-cols-[120px_60px_1fr_220px_40px] items-center gap-6">
-                  <div className="font-display font-black text-3xl md:text-4xl text-foreground/10 group-hover:text-[var(--primary)] transition-colors">{s.n}</div>
-                  <s.icon className="w-6 h-6 text-[var(--primary)]" strokeWidth={1.5} />
-                  <div>
-                    <h3 className="font-display font-bold text-2xl md:text-3xl">{s.t}</h3>
+                <div className="px-6 lg:px-12 py-8 md:py-10 grid grid-cols-[44px_28px_1fr_auto] md:grid-cols-[120px_60px_1fr_220px_40px] items-center gap-4 md:gap-6">
+                  <div className="font-display font-black text-2xl md:text-4xl text-foreground/10 group-hover:text-[var(--primary)] transition-colors">{s.n}</div>
+                  <s.icon className="w-5 h-5 md:w-6 md:h-6 text-[var(--primary)]" strokeWidth={1.5} />
+                  <div className="min-w-0">
+                    <h3 className="font-display font-bold text-lg sm:text-2xl md:text-3xl">{s.t}</h3>
                     <div className="font-mono-label text-muted-foreground mt-1 group-hover:text-muted-foreground/80">{s.s}</div>
                   </div>
                   <div className="hidden md:block">

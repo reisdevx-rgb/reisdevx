@@ -10,10 +10,10 @@ export function Shell({ children }: { children: React.ReactNode }) {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [pathname]);
   return (
-    <div className="min-h-screen flex flex-col pt-20 bg-background selection:bg-[var(--primary)]/30 selection:text-[var(--accent)]">
+    <div className="min-h-screen flex flex-col pt-20 bg-background selection:bg-[var(--primary)]/30 selection:text-[var(--accent)] overflow-x-hidden">
       <CursorDot />
       <Navbar />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 overflow-x-hidden">{children}</main>
       <Footer />
     </div>
   );

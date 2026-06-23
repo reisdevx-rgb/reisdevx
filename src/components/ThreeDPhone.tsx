@@ -61,7 +61,7 @@ function PhoneModel() {
 
 export function ThreeDPhone() {
   return (
-    <div className="w-full aspect-[4/5] md:aspect-auto md:h-[600px] relative">
+    <div className="w-full aspect-[4/5] md:aspect-[3/4] lg:aspect-auto lg:h-[600px] relative">
       <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 15], fov: 35 }}>
         <ambientLight intensity={1.5} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} castShadow />
