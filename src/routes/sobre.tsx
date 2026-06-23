@@ -171,12 +171,12 @@ function Sobre() {
             </div>
           </ScrollReveal>
 
-          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             <StaggerReveal staggerDelay={120}>
               {team.map((m) => (
                 <div
                   key={m.n}
-                  className="relative overflow-hidden border border-border p-8 bg-card rounded-sm group cursor-pointer transition-all duration-500 hover:border-[var(--primary)] hover:shadow-[0_20px_40px_-15px_rgba(0,102,255,0.4)]"
+                  className="relative h-full overflow-hidden border border-border p-8 bg-card rounded-sm group cursor-pointer transition-all duration-500 hover:border-[var(--primary)] hover:shadow-[0_20px_40px_-15px_rgba(0,102,255,0.4)]"
                 >
                   {/* Expanding ink fill from top-left */}
                   <div
