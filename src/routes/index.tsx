@@ -20,9 +20,9 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const stats: { n?: string; icon?: string; iconClass?: string; l: string }[] = [
+const stats: { n?: string; icon?: string; l: string }[] = [
   { icon: atendenteAsset.url, l: "ATENDIMENTO PERSONALIZADO" },
-  { icon: devicesAsset.url, iconClass: "w-16 h-16", l: "SITES MODERNOS E RESPONSIVOS" },
+  { icon: devicesAsset.url, l: "SITES MODERNOS E RESPONSIVOS" },
   { n: "5+", l: "Anos de Experiência" },
   { n: "50+", l: "Clientes Ativos" },
 ];
