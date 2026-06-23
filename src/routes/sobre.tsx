@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shell } from "@/components/Shell";
 import { ScrollReveal, StaggerReveal } from "@/components/ScrollReveal";
-import { ArrowRight, Code2, Handshake, Globe2, Clock, Sparkles, Cpu } from "lucide-react";
+import { ArrowRight, Code2, Handshake, Globe2, Clock, Sparkles, Cpu, Monitor, Rocket, ShoppingBag, Palette, Zap, Search } from "lucide-react";
 import { ThreeDPhone } from "@/components/ThreeDPhone";
 
 export const Route = createFileRoute("/sobre")({
@@ -160,6 +160,45 @@ function Sobre() {
               ))}
             </StaggerReveal>
           </div>
+
+          <ScrollReveal>
+            <div className="mt-24 relative overflow-hidden border border-border bg-card rounded-sm">
+              <div className="absolute top-0 left-0 w-1 h-full bg-[var(--primary)]" />
+              <div className="absolute -top-32 -right-32 w-96 h-96 bg-[var(--primary)]/10 blur-3xl rounded-full pointer-events-none" />
+              <div className="relative grid md:grid-cols-[auto_1fr] gap-8 md:gap-12 p-8 md:p-12 items-start">
+                <div className="flex md:flex-col items-center md:items-start gap-4">
+                  <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-black text-4xl">R</div>
+                </div>
+                <div>
+                  <div className="font-mono-label text-[var(--accent)] mb-2">Fundador</div>
+                  <h3 className="font-display font-black text-4xl md:text-5xl">Rodrigo Reis</h3>
+                  <div className="font-mono-label text-muted-foreground mt-2">Fundador & Desenvolvedor</div>
+                  <p className="text-muted-foreground mt-6 text-base md:text-lg max-w-2xl leading-relaxed">
+                    Transformo ideias em experiências digitais modernas através de design estratégico, desenvolvimento web e soluções personalizadas para empresas e profissionais que desejam crescer no ambiente digital.
+                  </p>
+
+                  <div className="mt-10">
+                    <div className="font-mono-label text-[var(--accent)] mb-5">Áreas de atuação</div>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                      {[
+                        { icon: Monitor, t: "Desenvolvimento de Sites" },
+                        { icon: Rocket, t: "Landing Pages" },
+                        { icon: ShoppingBag, t: "E-commerce" },
+                        { icon: Palette, t: "Design de Interfaces (UI/UX)" },
+                        { icon: Zap, t: "Automações" },
+                        { icon: Search, t: "SEO e Performance" },
+                      ].map((a) => (
+                        <div key={a.t} className="group flex items-center gap-3 border border-border bg-background/40 px-4 py-3 rounded-sm transition-all duration-300 hover:border-[var(--primary)] hover:bg-[var(--primary)]/5">
+                          <a.icon className="w-5 h-5 text-[var(--primary)] transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
+                          <span className="text-sm font-medium">{a.t}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
