@@ -57,6 +57,7 @@ export function ScrollReveal({
 interface StaggerRevealProps {
   children: React.ReactNode;
   className?: string;
+  itemClassName?: string;
   staggerDelay?: number;
   baseDelay?: number;
   duration?: number;
@@ -66,6 +67,7 @@ interface StaggerRevealProps {
 export function StaggerReveal({
   children,
   className = "",
+  itemClassName = "",
   staggerDelay = 100,
   baseDelay = 0,
   duration = 600,
