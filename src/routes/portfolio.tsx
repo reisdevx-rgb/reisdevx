@@ -72,8 +72,8 @@ function Portfolio() {
                 <div className="portfolio-card-glow" />
                 <img src={p.img} alt={p.n} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
 
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <div className="bg-white text-[var(--primary)] font-mono-label px-6 py-3 rounded-sm font-bold shadow-xl translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <div className="absolute inset-x-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[var(--primary)] py-5 flex items-center justify-center">
+                  <div className="bg-white text-[var(--primary)] font-mono-label px-6 py-3 rounded-sm font-bold shadow-xl">
                     VISUALIZAR MODELO
                   </div>
                 </div>
