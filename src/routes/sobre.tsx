@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shell } from "@/components/Shell";
 import { ScrollReveal, StaggerReveal } from "@/components/ScrollReveal";
-import { ArrowRight, Code2, Handshake, Globe2, Clock, Sparkles, Cpu } from "lucide-react";
+import { ArrowRight, Code2, Handshake, Globe2, Clock, Sparkles, Cpu, Monitor, Rocket, ShoppingBag, Palette, Zap, Search } from "lucide-react";
 import { ThreeDPhone } from "@/components/ThreeDPhone";
 
 export const Route = createFileRoute("/sobre")({
