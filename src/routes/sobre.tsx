@@ -172,7 +172,7 @@ function Sobre() {
           </ScrollReveal>
 
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-            <StaggerReveal staggerDelay={120}>
+            <StaggerReveal staggerDelay={120} itemClassName="h-full">
               {team.map((m) => (
                 <div
                   key={m.n}
