@@ -57,6 +57,7 @@ export function ScrollReveal({
 interface StaggerRevealProps {
   children: React.ReactNode;
   className?: string;
+  itemClassName?: string;
   staggerDelay?: number;
   baseDelay?: number;
   duration?: number;
@@ -66,6 +67,7 @@ interface StaggerRevealProps {
 export function StaggerReveal({
   children,
   className = "",
+  itemClassName = "",
   staggerDelay = 100,
   baseDelay = 0,
   duration = 600,
@@ -100,6 +102,7 @@ export function StaggerReveal({
         <div
           key={i}
           ref={i === 0 ? firstRef : undefined}
+          className={itemClassName}
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : `translateY(${distance}px)`,
