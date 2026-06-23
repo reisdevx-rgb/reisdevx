@@ -39,11 +39,18 @@ const pillars = [
 ];
 
 const projects = [
-  { name: "Barbearia Clássica", tag: "Institucional", img: barbeariaImg },
-  { name: "Clínica Médica", tag: "Institucional", img: clinicaImg },
+  { name: "Barbearia Clássica", tag: "Institucional", img: barbeariaImg, url: "https://sitedebarbearia.lovable.app" },
+  { name: "Clínica Médica", tag: "Institucional", img: clinicaImg, url: "https://sitedeclinicamedica.lovable.app" },
 ];
 
 function Index() {
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    document.body.style.overflow = previewUrl ? "hidden" : "unset";
+    return () => { document.body.style.overflow = "unset"; };
+  }, [previewUrl]);
+
   return (
     <Shell>
       {/* HERO */}
