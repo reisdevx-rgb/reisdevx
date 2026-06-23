@@ -2,7 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Shell } from "@/components/Shell";
 import { ScrollReveal, StaggerReveal } from "@/components/ScrollReveal";
 import { InteractiveDots } from "@/components/InteractiveDots";
-import { ArrowRight, ArrowDown, Zap, Shield, Award, HeartHandshake } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowRight, ArrowDown, Zap, Shield, Award, HeartHandshake, X } from "lucide-react";
 import barbeariaImg from "@/assets/barbearia.png";
 import clinicaImg from "@/assets/clinica-medica.png";
 import atendenteAsset from "@/assets/atendente.png.asset.json";
@@ -38,11 +39,18 @@ const pillars = [
 ];
 
 const projects = [
-  { name: "Barbearia Clássica", tag: "Institucional", img: barbeariaImg },
-  { name: "Clínica Médica", tag: "Institucional", img: clinicaImg },
+  { name: "Barbearia Clássica", tag: "Institucional", img: barbeariaImg, url: "https://sitedebarbearia.lovable.app" },
+  { name: "Clínica Médica", tag: "Institucional", img: clinicaImg, url: "https://sitedeclinicamedica.lovable.app" },
 ];
 
 function Index() {
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    document.body.style.overflow = previewUrl ? "hidden" : "unset";
+    return () => { document.body.style.overflow = "unset"; };
+  }, [previewUrl]);
+
   return (
     <Shell>
       {/* HERO */}
@@ -165,17 +173,28 @@ function Index() {
           </ScrollReveal>
       <StaggerReveal staggerDelay={120} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((p) => (
-          <Link key={p.name} to="/portfolio" className="group block">
-            <div className="aspect-[4/3] overflow-hidden bg-muted rounded-sm">
+          <button
+            key={p.name}
+            type="button"
+            onClick={() => setPreviewUrl(p.url)}
+            className="group block text-left"
+          >
+            <div className="relative aspect-[4/3] overflow-hidden bg-muted rounded-sm">
               <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
+              <div className="absolute inset-0 bg-[var(--primary)]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                <div className="bg-white text-[var(--primary)] font-mono-label px-6 py-3 rounded-sm font-bold shadow-xl translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  VISUALIZAR MODELO
+                </div>
+              </div>
             </div>
             <h3 className="font-display font-bold text-xl mt-4">{p.name}</h3>
             <div className="font-mono-label text-muted-foreground mt-1 text-sm">{p.tag}</div>
-          </Link>
+          </button>
         ))}
       </StaggerReveal>
         </div>
       </section>
+
 
       {/* CTA */}
       <section className="px-6 lg:px-12 py-32 border-t border-border bg-card text-foreground relative overflow-hidden">
@@ -191,6 +210,29 @@ function Index() {
           </ScrollReveal>
         </div>
       </section>
+
+      {previewUrl && (
+        <div className="fixed inset-0 z-[100] bg-background animate-in fade-in duration-300">
+          <div className="absolute top-0 left-0 right-0 h-16 bg-background/80 backdrop-blur-md border-b border-border px-6 flex items-center justify-between z-10">
+            <div className="flex items-center gap-3">
+              <div className="w-3 h-3 rounded-full bg-red-500" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500" />
+              <div className="w-3 h-3 rounded-full bg-green-500" />
+              <span className="ml-4 font-mono-label text-sm text-muted-foreground hidden md:inline">Visualização de Modelo</span>
+            </div>
+            <button
+              onClick={() => setPreviewUrl(null)}
+              className="flex items-center gap-2 hover:text-[var(--gold)] transition-colors font-mono-label"
+            >
+              <X className="w-5 h-5" />
+              <span>Fechar</span>
+            </button>
+          </div>
+          <div className="w-full h-full pt-16">
+            <iframe src={previewUrl} className="w-full h-full border-none" title="Site Preview" />
+          </div>
+        </div>
+      )}
     </Shell>
   );
 }
