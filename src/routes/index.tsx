@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
 
 const stats: { n?: string; icon?: string; l: string }[] = [
   { icon: atendenteAsset.url, l: "ATENDIMENTO PERSONALIZADO" },
-  { icon: devicesAsset.url, l: "Satisfação" },
+  { icon: devicesAsset.url, l: "SITES MODERNOS E RESPONSIVOS" },
   { n: "5+", l: "Anos de Experiência" },
   { n: "50+", l: "Clientes Ativos" },
 ];
