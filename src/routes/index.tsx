@@ -8,6 +8,7 @@ import clinicaImg from "@/assets/clinica-medica.png";
 import atendenteAsset from "@/assets/atendente.png.asset.json";
 import devicesAsset from "@/assets/devices.png.asset.json";
 import raioAsset from "@/assets/raio.png.asset.json";
+import apertoMaoAsset from "@/assets/aperto-mao.png.asset.json";
 
 
 
@@ -25,7 +26,7 @@ const stats: { n?: string; icon?: string; l: string }[] = [
   { icon: atendenteAsset.url, l: "ATENDIMENTO PERSONALIZADO" },
   { icon: devicesAsset.url, l: "SITES MODERNOS E RESPONSIVOS" },
   { icon: raioAsset.url, l: "FOCO EM PERFORMANCE E SEO" },
-  { n: "50+", l: "SUPORTE DEDICADO" },
+  { icon: apertoMaoAsset.url, l: "SUPORTE DEDICADO" },
 ];
 
 
