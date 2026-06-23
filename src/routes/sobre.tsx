@@ -141,11 +141,21 @@ function Sobre() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <StaggerReveal staggerDelay={120}>
               {team.map((m) => (
-                <div key={m.n} className="border border-border p-8 bg-card hover:border-[var(--primary)] transition-colors rounded-sm group">
-                  <div className="w-16 h-16 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold group-hover:shadow-[0_0_15px_rgba(0,102,255,0.3)] transition-all">{m.i}</div>
-                  <h3 className="font-display font-bold text-xl mt-6">{m.n}</h3>
-                  <div className="font-mono-label text-[var(--accent)] mt-1">{m.r}</div>
-                  <p className="text-muted-foreground mt-4 text-sm">{m.d}</p>
+                <div
+                  key={m.n}
+                  className="relative overflow-hidden border border-border p-8 bg-card rounded-sm group cursor-pointer transition-all duration-500 hover:border-[var(--primary)] hover:shadow-[0_20px_40px_-15px_rgba(0,102,255,0.4)]"
+                >
+                  {/* Expanding ink fill from the avatar */}
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute top-8 left-8 w-16 h-16 rounded-full bg-[var(--primary)] scale-0 group-hover:scale-[14] transition-transform duration-700 ease-out origin-center"
+                  />
+                  <div className="relative z-10 w-16 h-16 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-display font-bold transition-all duration-500 group-hover:bg-white group-hover:text-[var(--primary)] group-hover:rotate-[360deg]">
+                    {m.i}
+                  </div>
+                  <h3 className="relative z-10 font-display font-bold text-xl mt-6 transition-colors duration-500 group-hover:text-white">{m.n}</h3>
+                  <div className="relative z-10 font-mono-label text-[var(--accent)] mt-1 transition-colors duration-500 group-hover:text-white">{m.r}</div>
+                  <p className="relative z-10 text-muted-foreground mt-4 text-sm transition-colors duration-500 group-hover:text-white/90">{m.d}</p>
                 </div>
               ))}
             </StaggerReveal>
