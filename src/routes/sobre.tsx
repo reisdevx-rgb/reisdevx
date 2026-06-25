@@ -6,8 +6,25 @@ import { ThreeDPhone } from "@/components/ThreeDPhone";
 
 export const Route = createFileRoute("/sobre")({
   component: Sobre,
-  head: () => ({ meta: [{ title: "Sobre — ReisDevX" }, { name: "description", content: "Estúdio de desenvolvimento web premium, fundado para transformar negócios através de soluções digitais que dominam mercados." }] }),
+  head: () => {
+    const title = "Sobre a ReisDevX — Estúdio de Desenvolvimento Web Premium";
+    const description = "Conheça a ReisDevX: estúdio de criação de sites e desenvolvimento web focado em performance, design e resultados reais para o seu negócio.";
+    const url = "https://reisdevx.com.br/sobre";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+      ],
+      links: [{ rel: "canonical", href: url }],
+    };
+  },
 });
+
 
 const principles = [
   { icon: Code2, t: "Excelência Técnica", d: "Código limpo, arquitetura sólida e performance otimizada em cada linha que escrevemos." },
