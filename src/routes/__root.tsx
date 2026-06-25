@@ -71,25 +71,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     meta: [
       { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ReisDevX — Engenhando Impérios Digitais" },
-      { name: "description", content: "Estúdio de desenvolvimento web premium. Sites, e-commerce, SaaS e landing pages de alta engenharia." },
+      { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
+      { name: "theme-color", content: "#0a0a0a" },
       { name: "author", content: "ReisDevX" },
-      { property: "og:title", content: "ReisDevX — Engenhando Impérios Digitais" },
-      { property: "og:description", content: "Estúdio de desenvolvimento web premium. Sites, e-commerce, SaaS e landing pages de alta engenharia." },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      { name: "googlebot", content: "index, follow" },
+      { name: "format-detection", content: "telephone=no" },
+      { property: "og:site_name", content: "ReisDevX" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "ReisDevX — Engenhando Impérios Digitais" },
-      { name: "twitter:description", content: "Estúdio de desenvolvimento web premium. Sites, e-commerce, SaaS e landing pages de alta engenharia." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6bbf5000-4aef-46e1-9691-03a7366d5c09/id-preview-26bd5447--6371c93f-8d22-4ec3-ad26-58b502b27889.lovable.app-1778934185637.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6bbf5000-4aef-46e1-9691-03a7366d5c09/id-preview-26bd5447--6371c93f-8d22-4ec3-ad26-58b502b27889.lovable.app-1778934185637.png" },
+      { property: "og:locale", content: "pt_BR" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@reisdevx" },
+      { name: "twitter:creator", content: "@reisdevx" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -97,7 +93,52 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
       },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://reisdevx.com.br/#organization",
+              name: "ReisDevX",
+              url: "https://reisdevx.com.br/",
+              description: "Estúdio de desenvolvimento web premium especializado em criação de sites, landing pages, e-commerce, SaaS e design de interfaces.",
+              areaServed: { "@type": "Country", name: "Brasil" },
+              sameAs: ["https://instagram.com/reisdevx"],
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://reisdevx.com.br/#website",
+              url: "https://reisdevx.com.br/",
+              name: "ReisDevX",
+              inLanguage: "pt-BR",
+              publisher: { "@id": "https://reisdevx.com.br/#organization" },
+            },
+            {
+              "@type": "ProfessionalService",
+              "@id": "https://reisdevx.com.br/#service",
+              name: "ReisDevX — Criação de Sites e Desenvolvimento Web",
+              url: "https://reisdevx.com.br/",
+              image: "https://reisdevx.com.br/og-image.png",
+              priceRange: "$$",
+              areaServed: { "@type": "Country", name: "Brasil" },
+              serviceType: [
+                "Criação de Sites",
+                "Desenvolvimento Web",
+                "Landing Pages",
+                "E-commerce",
+                "Design de Interfaces",
+                "Aplicações SaaS",
+              ],
+            },
+          ],
+        }),
+      },
+    ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
@@ -106,7 +147,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>

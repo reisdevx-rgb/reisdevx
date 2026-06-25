@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reisdevx.com.br/sitemap.xml

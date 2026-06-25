@@ -15,13 +15,26 @@ import apertoMaoAsset from "@/assets/aperto-mao.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
-  head: () => ({
-    meta: [
-      { title: "ReisDevX — Engenhando Impérios Digitais" },
-      { name: "description", content: "Estúdio de desenvolvimento web premium. Sites de alto impacto, e-commerce, SaaS e landing pages." },
-    ],
-  }),
+  head: () => {
+    const title = "ReisDevX — Criação de Sites, Landing Pages e Desenvolvimento Web";
+    const description = "Estúdio de desenvolvimento web premium. Criação de sites profissionais, landing pages de alta conversão, e-commerce, SaaS e design de interfaces que dominam mercados.";
+    const url = "https://reisdevx.com.br/";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { name: "keywords", content: "criação de sites, desenvolvimento web, landing pages, design de interfaces, e-commerce, SaaS, sites profissionais, agência digital, ReisDevX" },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+      ],
+      links: [{ rel: "canonical", href: url }],
+    };
+  },
 });
+
 
 const stats: { n?: string; icon?: string; l: string }[] = [
   { icon: atendenteAsset.url, l: "ATENDIMENTO PERSONALIZADO" },

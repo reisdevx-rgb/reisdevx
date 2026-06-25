@@ -6,8 +6,25 @@ import { Mail, MessageCircle, MapPin, Clock, Plus, Minus } from "lucide-react";
 
 export const Route = createFileRoute("/contato")({
   component: Contato,
-  head: () => ({ meta: [{ title: "Contato — ReisDevX" }, { name: "description", content: "Inicie seu projeto digital. Resposta em até 24 horas úteis." }] }),
+  head: () => {
+    const title = "Contato — Solicite seu Projeto Digital | ReisDevX";
+    const description = "Fale com a ReisDevX e inicie seu projeto de criação de site, landing page, e-commerce ou aplicação. Orçamento personalizado em até 24h úteis.";
+    const url = "https://reisdevx.com.br/contato";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+      ],
+      links: [{ rel: "canonical", href: url }],
+    };
+  },
 });
+
 
 const info = [
   { icon: Mail, t: "Email", v: "reisdevx@gmail.com" },
