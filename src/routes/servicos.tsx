@@ -5,8 +5,26 @@ import { Globe, ShoppingBag, BarChart3, Layers, Smartphone, Compass, ArrowRight 
 
 export const Route = createFileRoute("/servicos")({
   component: Servicos,
-  head: () => ({ meta: [{ title: "Serviços — ReisDevX" }, { name: "description", content: "Sites institucionais, e-commerce, plataformas SaaS, landing pages, web apps e consultoria digital." }] }),
+  head: () => {
+    const title = "Serviços — Criação de Sites, E-commerce e Landing Pages | ReisDevX";
+    const description = "Serviços de criação de sites institucionais, e-commerce, landing pages de alta conversão, plataformas SaaS, web apps e design de interfaces. Soluções digitais sob medida.";
+    const url = "https://reisdevx.com.br/servicos";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { name: "keywords", content: "criação de sites, e-commerce, landing pages, SaaS, web apps, design de interfaces, desenvolvimento web" },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+      ],
+      links: [{ rel: "canonical", href: url }],
+    };
+  },
 });
+
 
 const services = [
   { n: "01", icon: Globe, t: "Sites Institucionais", s: "Presença digital de alto impacto", m: "< 1.5s", l: "Tempo de carregamento" },
