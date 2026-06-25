@@ -8,8 +8,25 @@ import clinicaImg from "@/assets/clinica-medica.png";
 
 export const Route = createFileRoute("/portfolio")({
   component: Portfolio,
-  head: () => ({ meta: [{ title: "Portfólio — ReisDevX" }, { name: "description", content: "Portfólio selecionado de projetos: SaaS, e-commerce e sites institucionais construídos com precisão arquitetônica." }] }),
+  head: () => {
+    const title = "Portfólio — Projetos de Sites e Aplicações | ReisDevX";
+    const description = "Portfólio selecionado de sites, e-commerce, landing pages e plataformas SaaS desenvolvidos pela ReisDevX com precisão arquitetônica e design premium.";
+    const url = "https://reisdevx.com.br/portfolio";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+      ],
+      links: [{ rel: "canonical", href: url }],
+    };
+  },
 });
+
 
 const filters = ["Todos", "SaaS", "E-commerce", "Institucional"] as const;
 type Filter = (typeof filters)[number];
