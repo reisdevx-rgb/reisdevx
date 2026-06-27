@@ -137,7 +137,7 @@ function Sobre() {
                 <div key={t.y} className={`grid grid-cols-[50px_1fr] md:grid-cols-[100px_1fr] gap-4 md:gap-12 items-start ${i !== timeline.length - 1 ? "mb-12" : ""}`}>
                   <div className="font-display font-black text-xl md:text-4xl text-[var(--primary)] text-right pr-2 md:pr-0">{t.y}</div>
                   <div className="pl-6 md:pl-8 relative min-h-[88px] md:min-h-[96px]">
-              <div className="absolute -left-[31px] top-2 h-2 w-2 rounded-full border-4 border-background bg-[var(--primary)] md:-left-[21px] md:h-3 md:w-3" />
+              <div className="absolute -left-[31px] top-2 hidden h-2 w-2 rounded-full border-4 border-background bg-[var(--primary)] md:block md:-left-[21px] md:h-3 md:w-3" />
                     <h3 className="font-display font-bold text-xl md:text-2xl">{t.t}</h3>
                     <p className="text-muted-foreground mt-2 text-sm md:text-base max-w-2xl">{t.d}</p>
                   </div>
