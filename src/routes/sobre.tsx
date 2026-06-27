@@ -27,12 +27,12 @@ export const Route = createFileRoute("/sobre")({
 
 
 const principles = [
-  { icon: Code2, t: "Excelência Técnica", d: "Código limpo, arquitetura sólida e performance otimizada em cada linha." },
-  { icon: Handshake, t: "Parceria Real", d: "Não somos fornecedores, somos parceiros. Seu sucesso é nossa métrica principal." },
-  { icon: Globe2, t: "Visão Global", d: "Desenvolvemos soluções com padrão internacional, prontas para escalar globalmente." },
-  { icon: Clock, t: "Entrega no Prazo", d: "Metodologia ágil comprovada com 98% dos projetos entregues dentro do cronograma." },
-  { icon: Sparkles, t: "Qualidade Sem Concessões", d: "Cada detalhe é revisado. Nunca entregamos menos do que o melhor possível." },
-  { icon: Cpu, t: "Tecnologia de Ponta", d: "Utilizamos o stack mais moderno e eficiente para cada tipo de projeto." },
+  { icon: Code2, t: "Excelência Técnica", d: "Desenvolvimento com boas práticas, código organizado e foco em desempenho para garantir soluções eficientes e confiáveis." },
+  { icon: Handshake, t: "Parceria Real", d: "Acompanhamos cada etapa do projeto com dedicação, construindo uma relação de confiança e colaboração para alcançar os melhores resultados." },
+  { icon: Globe2, t: "Visão Global", d: "Criamos soluções modernas e versáteis, preparadas para acompanhar o crescimento do seu negócio e atender diferentes mercados." },
+  { icon: Clock, t: "Entrega no Prazo", d: "Planejamento, organização e compromisso para entregar cada projeto dentro do cronograma estabelecido." },
+  { icon: Sparkles, t: "Qualidade Sem Concessões", d: "Cada detalhe é desenvolvido com atenção e cuidado para oferecer um resultado profissional em todos os aspectos." },
+  { icon: Cpu, t: "Tecnologia de Ponta", d: "Utilizamos ferramentas e tecnologias modernas para desenvolver projetos rápidos, seguros e preparados para o futuro." },
 ];
 
 const timeline = [
