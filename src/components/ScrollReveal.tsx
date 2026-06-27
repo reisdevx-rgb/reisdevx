@@ -47,8 +47,10 @@ export function ScrollReveal({
     willChange: "opacity, transform",
   };
 
+  const responsiveClassName = ["min-w-0 max-w-full", className].filter(Boolean).join(" ");
+
   return (
-    <div ref={ref} className={className} style={style}>
+    <div ref={ref} className={responsiveClassName} style={style}>
       {children}
     </div>
   );
@@ -102,7 +104,7 @@ export function StaggerReveal({
         <div
           key={i}
           ref={i === 0 ? firstRef : undefined}
-          className={itemClassName}
+          className={["min-w-0 max-w-full", itemClassName].filter(Boolean).join(" ")}
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : `translateY(${distance}px)`,
@@ -117,7 +119,7 @@ export function StaggerReveal({
   );
 
   if (className) {
-    return <div className={className}>{wrapped}</div>;
+    return <div className={["min-w-0 max-w-full", className].filter(Boolean).join(" ")}>{wrapped}</div>;
   }
   return wrapped;
 }

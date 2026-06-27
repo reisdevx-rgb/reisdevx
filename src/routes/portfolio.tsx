@@ -54,20 +54,20 @@ function Portfolio() {
   }, [previewUrl]);
   return (
     <Shell>
-      <section className="px-6 lg:px-12 py-24 md:py-32">
+      <section className="px-4 py-20 sm:px-6 md:py-28 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-[1400px]">
           <ScrollReveal>
             <div className="font-mono-label text-[var(--accent)] mb-6">Nossos trabalhos</div>
-            <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Portfólio <span className="text-[var(--primary)]">Selecionado</span></h1>
+            <h1 className="font-display text-4xl font-black leading-[1] sm:text-5xl md:text-7xl">Portfólio <span className="text-[var(--primary)]">Selecionado</span></h1>
             <p className="text-lg text-muted-foreground mt-8 max-w-2xl">Estruturas digitais construídas com precisão arquitetônica. Clique em qualquer projeto para ver os detalhes completos.</p>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <div className="mt-12 flex flex-wrap gap-2">
+            <div className="mt-10 flex flex-wrap gap-2 sm:mt-12">
               {filters.map((f) => (
                 <button
                   key={f}
                   onClick={() => setActive(f)}
-                  className={`font-mono-label px-5 py-3 border transition-colors rounded-sm ${active === f ? "bg-[var(--primary)] text-white border-[var(--primary)]" : "border-border hover:border-[var(--primary)]"}`}
+                  className={`min-h-11 flex-1 rounded-sm border px-4 py-3 font-mono-label transition-colors sm:flex-none sm:px-5 ${active === f ? "bg-[var(--primary)] text-white border-[var(--primary)]" : "border-border hover:border-[var(--primary)]"}`}
                 >
                   {f}
                 </button>
@@ -77,8 +77,8 @@ function Portfolio() {
         </div>
       </section>
 
-      <section className="px-6 lg:px-12 pb-24">
-        <div className="mx-auto max-w-[1400px] grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="px-4 pb-20 sm:px-6 md:pb-24 lg:px-12">
+        <div className="mx-auto grid max-w-[1400px] gap-6 md:grid-cols-2 lg:grid-cols-3">
           <StaggerReveal staggerDelay={100}>
             {visible.map((p) => (
               <button
@@ -90,7 +90,7 @@ function Portfolio() {
                 <div className="relative aspect-video overflow-hidden bg-muted rounded-sm">
                   <img src={p.img} alt={p.n} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute inset-0 bg-[var(--primary)]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                    <div className="bg-white text-[var(--primary)] font-mono-label px-6 py-3 rounded-sm font-bold shadow-xl translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <div className="mx-4 rounded-sm bg-white px-4 py-3 text-center font-mono-label font-bold text-[var(--primary)] shadow-xl transition-transform duration-500 group-hover:translate-y-0 sm:px-6">
                       VISUALIZAR MODELO
                     </div>
                   </div>
@@ -101,11 +101,11 @@ function Portfolio() {
         </div>
       </section>
 
-      <section className="px-6 lg:px-12 py-24 border-t border-border text-center">
+      <section className="border-t border-border px-4 py-20 text-center sm:px-6 md:py-24 lg:px-12">
         <ScrollReveal>
-          <h2 className="font-display font-black text-4xl md:text-5xl">Seu projeto pode ser o <span className="text-[var(--primary)]">próximo case de sucesso.</span></h2>
+          <h2 className="font-display text-3xl font-black sm:text-4xl md:text-5xl">Seu projeto pode ser o <span className="text-[var(--primary)]">próximo case de sucesso.</span></h2>
           <p className="text-muted-foreground mt-6">Vamos construir algo extraordinário juntos.</p>
-          <Link to="/contato" className="mt-10 inline-flex items-center gap-3 bg-[var(--primary)] text-white font-mono-label px-8 py-4 hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] transition-all rounded-sm">
+          <Link to="/contato" className="mt-10 inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-sm bg-[var(--primary)] px-6 py-4 font-mono-label text-white transition-all hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] sm:w-auto sm:px-8">
             Iniciar meu projeto <ArrowRight className="w-4 h-4" />
           </Link>
         </ScrollReveal>
@@ -113,8 +113,8 @@ function Portfolio() {
 
       {previewUrl && (
         <div className="fixed inset-0 z-[100] bg-background animate-in fade-in duration-300">
-          <div className="absolute top-0 left-0 right-0 h-16 bg-background/80 backdrop-blur-md border-b border-border px-6 flex items-center justify-between z-10">
-            <div className="flex items-center gap-3">
+          <div className="absolute left-0 right-0 top-0 z-10 grid h-16 grid-cols-[minmax(0,1fr)_auto] items-center gap-3 border-b border-border bg-background/80 px-4 backdrop-blur-md sm:px-6">
+            <div className="flex min-w-0 items-center gap-3">
               <div className="w-3 h-3 rounded-full bg-red-500" />
               <div className="w-3 h-3 rounded-full bg-yellow-500" />
               <div className="w-3 h-3 rounded-full bg-green-500" />
@@ -122,7 +122,7 @@ function Portfolio() {
             </div>
             <button 
               onClick={() => setPreviewUrl(null)}
-              className="flex items-center gap-2 hover:text-[var(--gold)] transition-colors font-mono-label"
+              className="flex shrink-0 items-center gap-2 font-mono-label transition-colors hover:text-[var(--accent)]"
             >
               <X className="w-5 h-5" />
               <span>Fechar</span>
