@@ -12,4 +12,23 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
+  vite: {
+    environments: {
+      ssr: {
+        optimizeDeps: {
+          include: [
+            "react",
+            "react-dom",
+            "react-dom/client",
+            "react-dom/server",
+            "react/jsx-runtime",
+            "react/jsx-dev-runtime",
+          ],
+        },
+      },
+    },
+    resolve: {
+      dedupe: ["react", "react-dom"],
+    },
+  },
 });
