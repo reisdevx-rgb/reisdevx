@@ -27,7 +27,7 @@ export const Route = createFileRoute("/sobre")({
 
 
 const principles = [
-  { icon: Code2, t: "Excelência Técnica", d: "Código limpo, arquitetura sólida e performance otimizada em cada linha que escrevemos." },
+  { icon: Code2, t: "Excelência Técnica", d: "Código limpo, arquitetura sólida e performance otimizada em cada linha." },
   { icon: Handshake, t: "Parceria Real", d: "Não somos fornecedores, somos parceiros. Seu sucesso é nossa métrica principal." },
   { icon: Globe2, t: "Visão Global", d: "Desenvolvemos soluções com padrão internacional, prontas para escalar globalmente." },
   { icon: Clock, t: "Entrega no Prazo", d: "Metodologia ágil comprovada com 98% dos projetos entregues dentro do cronograma." },
@@ -67,7 +67,7 @@ function Sobre() {
                 <div className="mt-8 flex min-w-0 items-center gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--primary)] font-display text-lg font-bold text-white md:h-14 md:w-14 md:text-xl">R</div>
                   <div>
-                    <div className="font-bold text-sm md:text-base">Rafael Reis</div>
+                    <div className="font-bold text-sm md:text-base">Rodrigo Reis</div>
                     <div className="font-mono-label text-muted-foreground text-xs md:text-sm">CEO & Fundador</div>
                   </div>
                 </div>
