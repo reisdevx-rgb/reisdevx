@@ -75,7 +75,7 @@ function Sobre() {
             </div>
           </ScrollReveal>
           
-          <ScrollReveal delay={300} className="relative order-first mx-auto w-full max-w-[320px] md:order-last md:max-w-none">
+          <ScrollReveal delay={300} className="relative mx-auto w-full max-w-[320px] md:max-w-none">
             <div className="absolute inset-0 bg-radial-gradient from-[var(--primary)]/10 to-transparent blur-3xl rounded-full scale-150" />
             <ThreeDPhone />
           </ScrollReveal>
