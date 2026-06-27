@@ -168,7 +168,7 @@ function Servicos() {
         <ScrollReveal>
           <h2 className="font-display text-3xl font-black sm:text-4xl md:text-5xl">Qual serviço se encaixa <span className="text-[var(--primary)]">no seu projeto?</span></h2>
           <Link to="/contato" className="mt-10 inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-sm bg-[var(--primary)] px-6 py-4 font-mono-label text-white transition-all hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] sm:w-auto sm:px-8">
-            Falar com especialista <ArrowRight className="w-4 h-4" />
+            Falar com especialista
           </Link>
         </ScrollReveal>
       </section>
