@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 export function Footer() {
   return (
     <footer className="border-t border-border bg-background text-foreground">
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-12 py-16 grid gap-12 md:grid-cols-4">
+      <div className="mx-auto grid max-w-[1400px] gap-10 px-4 py-12 sm:px-6 md:grid-cols-4 md:gap-12 md:py-16 lg:px-12">
         <div className="md:col-span-2">
           <div className="font-display font-black text-2xl">
             ReisDev<span className="text-[var(--accent)]">X</span>
@@ -30,7 +30,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-border py-6 text-center font-mono-label text-foreground/40">
+      <div className="border-t border-border px-4 py-6 text-center font-mono-label text-foreground/40">
         © {new Date().getFullYear()} ReisDevX — Todos os direitos reservados
       </div>
     </footer>

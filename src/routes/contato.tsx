@@ -47,19 +47,19 @@ function Contato() {
 
   return (
     <Shell>
-      <section className="px-6 lg:px-12 py-24 md:py-32">
+      <section className="px-4 py-20 sm:px-6 md:py-28 lg:px-12 lg:py-32">
         <div className="mx-auto max-w-[1400px]">
           <ScrollReveal>
             <div className="font-mono-label text-[var(--accent)] mb-6">Vamos trabalhar juntos</div>
-            <h1 className="font-display font-black text-5xl md:text-7xl leading-[0.95]">Protocolo <span className="text-[var(--primary)]">de Build</span></h1>
+            <h1 className="font-display text-4xl font-black leading-[1] sm:text-5xl md:text-7xl">Protocolo <span className="text-[var(--primary)]">de Build</span></h1>
           </ScrollReveal>
-          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+          <div className="mt-12 grid gap-px border border-border bg-border md:mt-16 md:grid-cols-2 lg:grid-cols-4">
             <StaggerReveal staggerDelay={100}>
               {info.map((i) => (
-                <div key={i.t} className="bg-card p-8 hover:bg-secondary transition-colors">
+                <div key={i.t} className="bg-card p-6 transition-colors hover:bg-secondary sm:p-8">
                   <i.icon className="w-6 h-6 text-[var(--primary)]" strokeWidth={1.5} />
                   <div className="font-mono-label text-muted-foreground mt-6">{i.t}</div>
-                  <div className="font-display font-bold text-lg mt-1">{i.v}</div>
+                  <div className="mt-1 font-display text-lg font-bold break-words">{i.v}</div>
                 </div>
               ))}
             </StaggerReveal>
@@ -67,10 +67,10 @@ function Contato() {
         </div>
       </section>
 
-      <section className="px-6 lg:px-12 pb-24">
-        <div className="mx-auto max-w-[1400px] grid lg:grid-cols-[1.4fr_1fr] gap-12">
+      <section className="px-4 pb-20 sm:px-6 md:pb-24 lg:px-12">
+        <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(280px,1fr)] lg:gap-12">
           <ScrollReveal>
-            <form onSubmit={(e) => { e.preventDefault(); alert("Briefing enviado!"); }} className="border border-border p-8 md:p-10 space-y-6 bg-card/30 backdrop-blur-sm rounded-sm">
+            <form onSubmit={(e) => { e.preventDefault(); alert("Briefing enviado!"); }} className="space-y-6 rounded-sm border border-border bg-card/30 p-5 backdrop-blur-sm sm:p-8 md:p-10">
               <div className="grid md:grid-cols-2 gap-6">
                 <Field label="Nome completo *" value={form.nome} onChange={(v) => upd("nome", v)} required />
                 <Field label="Email corporativo *" type="email" value={form.email} onChange={(v) => upd("email", v)} required />
@@ -83,16 +83,16 @@ function Contato() {
                 <label className="font-mono-label text-muted-foreground">Briefing do projeto *</label>
                 <textarea required rows={6} value={form.briefing} onChange={(e) => upd("briefing", e.target.value)} className="mt-2 w-full border border-border bg-background px-4 py-3 focus:border-[var(--primary)] outline-none rounded-sm transition-colors" />
               </div>
-              <button type="submit" className="w-full md:w-auto bg-[var(--primary)] text-white font-mono-label px-8 py-4 hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] transition-all rounded-sm">Enviar Briefing</button>
+              <button type="submit" className="w-full rounded-sm bg-[var(--primary)] px-6 py-4 font-mono-label text-white transition-all hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] md:w-auto md:px-8">Enviar Briefing</button>
             </form>
           </ScrollReveal>
 
           <ScrollReveal delay={150}>
-            <aside className="bg-card text-foreground p-8 md:p-10 self-start border border-border rounded-sm relative overflow-hidden">
+            <aside className="relative self-start overflow-hidden rounded-sm border border-border bg-card p-5 text-foreground sm:p-8 md:p-10">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--primary)]/5 blur-[40px] rounded-full" />
-              <div className="relative z-10 flex items-center justify-between">
+              <div className="relative z-10 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4">
                 <div className="font-mono-label text-[var(--accent)]">Manifesto do Projeto</div>
-                <span className="font-mono-label flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse shadow-[0_0_8px_var(--accent)]" /> Live</span>
+                <span className="flex shrink-0 items-center gap-2 font-mono-label"><span className="h-2 w-2 rounded-full bg-[var(--accent)] shadow-[0_0_8px_var(--accent)] animate-pulse" /> Live</span>
               </div>
               <div className="mt-8 space-y-5 font-mono text-sm">
                 <Row k="CLIENTE" v={form.nome} />
@@ -110,19 +110,19 @@ function Contato() {
         </div>
       </section>
 
-      <section className="px-6 lg:px-12 py-24 border-t border-border">
+      <section className="border-t border-border px-4 py-20 sm:px-6 md:py-24 lg:px-12">
         <div className="mx-auto max-w-[900px]">
           <ScrollReveal>
             <div className="font-mono-label text-[var(--accent)] mb-4">Dúvidas frequentes</div>
-            <h2 className="font-display font-black text-5xl md:text-6xl">Perguntas <span className="text-[var(--primary)]">& Respostas</span></h2>
+            <h2 className="font-display text-4xl font-black sm:text-5xl md:text-6xl">Perguntas <span className="text-[var(--primary)]">& Respostas</span></h2>
           </ScrollReveal>
           <div className="mt-12 border-t border-border">
             <StaggerReveal staggerDelay={100}>
               {faqs.map((f, i) => (
                 <div key={f.q} className="border-b border-border">
-                  <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between text-left py-6">
-                    <span className="font-display font-bold text-lg md:text-xl">{f.q}</span>
-                    {openFaq === i ? <Minus className="w-5 h-5 text-[var(--primary)]" /> : <Plus className="w-5 h-5 text-[var(--primary)]" />}
+                  <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="grid w-full grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-6 text-left">
+                    <span className="font-display text-lg font-bold md:text-xl">{f.q}</span>
+                    {openFaq === i ? <Minus className="h-5 w-5 shrink-0 text-[var(--primary)]" /> : <Plus className="h-5 w-5 shrink-0 text-[var(--primary)]" />}
                   </button>
                   {openFaq === i && <p className="text-muted-foreground pb-6 max-w-2xl">{f.a}</p>}
                 </div>
@@ -139,7 +139,7 @@ function Field({ label, value, onChange, type = "text", required }: { label: str
   return (
     <div>
       <label className="font-mono-label text-muted-foreground">{label}</label>
-      <input required={required} type={type} value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full border border-border bg-background px-4 py-3 focus:border-[var(--primary)] outline-none rounded-sm transition-colors" />
+      <input required={required} type={type} value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 outline-none transition-colors focus:border-[var(--primary)]" />
     </div>
   );
 }
@@ -147,7 +147,7 @@ function Select({ label, value, onChange, options }: { label: string; value: str
   return (
     <div>
       <label className="font-mono-label text-muted-foreground">{label}</label>
-      <select required value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full border border-border bg-background px-4 py-3 focus:border-[var(--primary)] outline-none rounded-sm transition-colors">
+      <select required value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 outline-none transition-colors focus:border-[var(--primary)]">
         <option value="">Selecione...</option>
         {options.map((o) => <option key={o} value={o}>{o}</option>)}
       </select>
@@ -156,9 +156,9 @@ function Select({ label, value, onChange, options }: { label: string; value: str
 }
 function Row({ k, v }: { k: string; v: string }) {
   return (
-    <div className="flex justify-between gap-4 border-b border-foreground/5 pb-3">
+    <div className="grid grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] gap-4 border-b border-foreground/5 pb-3">
       <span className="text-foreground/40">{k}</span>
-      <span className="text-[var(--primary)] text-right truncate max-w-[60%] font-bold">{v || "—"}</span>
+      <span className="text-right font-bold text-[var(--primary)] break-words">{v || "—"}</span>
     </div>
   );
 }

@@ -84,7 +84,7 @@ export function ThreeDPhone() {
   return (
     <div
       ref={containerRef}
-      className="w-full aspect-[4/5] md:aspect-[3/4] lg:aspect-auto lg:h-[600px] relative"
+      className="relative mx-auto aspect-[4/5] w-full max-w-[320px] md:aspect-[3/4] md:max-w-full lg:h-[600px] lg:aspect-auto"
     >
       {mounted && (
         <Canvas

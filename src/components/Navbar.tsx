@@ -60,9 +60,9 @@ export function Navbar() {
         : "bg-background/85 backdrop-blur-md border-b border-border/40"
     }`}>
 
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-12 h-20 flex items-center justify-between">
+      <div className="mx-auto grid h-20 max-w-[1400px] grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 sm:px-6 lg:flex lg:px-12">
 
-        <Link to="/" className="font-display font-black text-xl tracking-tight relative z-50">
+        <Link to="/" className="relative z-50 truncate font-display text-xl font-black">
           ReisDev<span className="text-[var(--accent)]">X</span>
         </Link>
 
@@ -96,14 +96,14 @@ export function Navbar() {
 
 
         {/* Mobile/tablet trigger - Show below lg */}
-        <div className="lg:hidden flex items-center gap-2 relative z-50">
+        <div className="relative z-50 flex shrink-0 items-center gap-2 lg:hidden">
           <ThemeToggle />
           <button
             ref={buttonRef}
             aria-label={open ? "Fechar menu" : "Abrir menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="w-11 h-11 flex items-center justify-center border border-border hover:border-foreground transition-colors"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-border transition-colors hover:border-foreground"
           >
             {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -114,7 +114,7 @@ export function Navbar() {
       {/* Mobile/tablet slide-out panel - right to left */}
       <div
         ref={panelRef}
-        className={`lg:hidden fixed top-0 right-0 h-screen w-80 max-w-[85vw] bg-background border-l border-border shadow-2xl transition-transform duration-300 ease-in-out ${open ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed right-0 top-0 z-50 h-dvh w-80 max-w-[85vw] overflow-y-auto border-l border-border bg-background shadow-2xl transition-transform duration-300 ease-in-out lg:hidden ${open ? "translate-x-0" : "translate-x-full"}`}
       >
         <nav className="flex flex-col p-6 pt-24 gap-4">
           {links.map((l) => {
@@ -140,7 +140,7 @@ export function Navbar() {
       {/* Backdrop */}
       {open && (
         <div 
-          className="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity"
+           className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity lg:hidden"
           onClick={() => setOpen(false)}
         />
       )}
