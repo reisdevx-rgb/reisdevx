@@ -147,7 +147,7 @@ function Servicos() {
                     desc: "text-muted-foreground mt-3 text-sm transition-colors duration-500 group-hover:text-foreground",
                   },
                 ];
-                const a = animations[idx % 4];
+                const a = animations[3];
                 return (
                   <div key={p.n} className={a.card}>
                     {a.extra}
