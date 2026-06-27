@@ -60,7 +60,7 @@ export function Navbar() {
         : "bg-background/85 backdrop-blur-md border-b border-border/40"
     }`}>
 
-      <div className="mx-auto grid h-20 max-w-[1400px] grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 sm:px-6 lg:flex lg:px-12">
+      <div className="mx-auto grid h-20 max-w-[1400px] grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 sm:px-6 lg:flex lg:justify-between lg:px-12">
 
         <Link to="/" className="relative z-50 truncate font-display text-xl font-black">
           ReisDev<span className="text-[var(--accent)]">X</span>
@@ -68,6 +68,7 @@ export function Navbar() {
 
         {/* Desktop nav - Show on lg (1024px+) to keep tablet on mobile menu */}
         <nav className="hidden lg:flex items-center gap-10">
+
           {links.map((l) => {
             const active = pathname === l.to;
             return (
