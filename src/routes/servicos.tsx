@@ -93,13 +93,72 @@ function Servicos() {
           </ScrollReveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
             <StaggerReveal staggerDelay={120}>
-              {process.map((p) => (
-                 <div key={p.n} className="bg-card p-6 transition-colors hover:bg-secondary sm:p-8 lg:p-10">
-                  <div className="font-display font-black text-5xl text-[var(--primary)]">{p.n}</div>
-                  <h3 className="font-display font-bold text-xl mt-6">{p.t}</h3>
-                  <p className="text-muted-foreground mt-3 text-sm">{p.d}</p>
-                </div>
-              ))}
+              {process.map((p, idx) => {
+                const animations = [
+                  // 01 - Sweep light bar bottom→top + number lift
+                  {
+                    card: "group relative overflow-hidden bg-card p-6 sm:p-8 lg:p-10 transition-all duration-500 hover:bg-secondary",
+                    extra: (
+                      <>
+                        <span className="pointer-events-none absolute inset-x-0 bottom-0 h-0 bg-gradient-to-t from-[var(--primary)]/20 to-transparent transition-all duration-700 ease-out group-hover:h-full" />
+                        <span className="pointer-events-none absolute bottom-0 left-0 h-[2px] w-0 bg-[var(--primary)] shadow-[0_0_12px_var(--primary)] transition-all duration-700 group-hover:w-full" />
+                      </>
+                    ),
+                    num: "font-display font-black text-5xl text-[var(--primary)] transition-transform duration-500 group-hover:-translate-y-1",
+                    title: "font-display font-bold text-xl mt-6 transition-colors duration-500",
+                    desc: "text-muted-foreground mt-3 text-sm transition-colors duration-500 group-hover:text-foreground",
+                  },
+                  // 02 - Diagonal shine sweep + number tilt
+                  {
+                    card: "group relative overflow-hidden bg-card p-6 sm:p-8 lg:p-10 transition-colors duration-500 hover:bg-secondary",
+                    extra: (
+                      <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-[var(--primary)]/25 to-transparent skew-x-12 transition-transform duration-1000 ease-out group-hover:translate-x-full" />
+                    ),
+                    num: "font-display font-black text-5xl text-[var(--primary)] inline-block transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110",
+                    title: "font-display font-bold text-xl mt-6 transition-all duration-500 group-hover:tracking-wide",
+                    desc: "text-muted-foreground mt-3 text-sm transition-colors duration-500 group-hover:text-foreground",
+                  },
+                  // 03 - Radial glow + glitch shift on number
+                  {
+                    card: "group relative overflow-hidden bg-card p-6 sm:p-8 lg:p-10 transition-colors duration-500 hover:bg-secondary",
+                    extra: (
+                      <span
+                        className="pointer-events-none absolute -inset-20 opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-100"
+                        style={{ background: "radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--primary) 50%, transparent), transparent 60%)" }}
+                      />
+                    ),
+                    num: "font-display font-black text-5xl text-[var(--primary)] transition-all duration-500 group-hover:drop-shadow-[0_0_18px_var(--primary)] group-hover:[text-shadow:2px_0_0_var(--accent),-2px_0_0_var(--primary)]",
+                    title: "font-display font-bold text-xl mt-6 transition-colors duration-500 group-hover:text-[var(--primary)]",
+                    desc: "text-muted-foreground mt-3 text-sm transition-colors duration-500 group-hover:text-foreground",
+                  },
+                  // 04 - Border draw + lift + scaling number
+                  {
+                    card: "group relative overflow-hidden bg-card p-6 sm:p-8 lg:p-10 transition-all duration-500 hover:-translate-y-2 hover:bg-secondary hover:shadow-[0_20px_40px_-15px_rgba(0,102,255,0.5)]",
+                    extra: (
+                      <>
+                        <span className="pointer-events-none absolute top-0 left-0 h-[2px] w-0 bg-[var(--primary)] transition-all duration-300 group-hover:w-full" />
+                        <span className="pointer-events-none absolute top-0 right-0 h-0 w-[2px] bg-[var(--primary)] transition-all duration-300 delay-300 group-hover:h-full" />
+                        <span className="pointer-events-none absolute bottom-0 right-0 h-[2px] w-0 bg-[var(--primary)] transition-all duration-300 delay-[600ms] group-hover:w-full" />
+                        <span className="pointer-events-none absolute bottom-0 left-0 h-0 w-[2px] bg-[var(--primary)] transition-all duration-300 delay-[900ms] group-hover:h-full" />
+                      </>
+                    ),
+                    num: "font-display font-black text-5xl text-[var(--primary)] inline-block transition-transform duration-500 group-hover:scale-125",
+                    title: "font-display font-bold text-xl mt-6 transition-colors duration-500",
+                    desc: "text-muted-foreground mt-3 text-sm transition-colors duration-500 group-hover:text-foreground",
+                  },
+                ];
+                const a = animations[idx % 4];
+                return (
+                  <div key={p.n} className={a.card}>
+                    {a.extra}
+                    <div className="relative">
+                      <div className={a.num}>{p.n}</div>
+                      <h3 className={a.title}>{p.t}</h3>
+                      <p className={a.desc}>{p.d}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </StaggerReveal>
           </div>
         </div>
