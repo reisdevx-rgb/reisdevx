@@ -32,7 +32,7 @@ const principles = [
   { icon: Globe2, t: "Visão Global", d: "Criamos soluções modernas e versáteis, preparadas para acompanhar o crescimento do seu negócio e atender diferentes mercados." },
   { icon: Clock, t: "Entrega no Prazo", d: "Planejamento, organização e compromisso para entregar cada projeto dentro do cronograma estabelecido." },
   { icon: Sparkles, t: "Qualidade Sem Concessões", d: "Cada detalhe é desenvolvido com atenção e cuidado para oferecer um resultado profissional em todos os aspectos." },
-  { icon: Cpu, t: "Tecnologia de Ponta", d: "Utilizamos ferramentas e tecnologias modernas para desenvolver projetos rápidos, seguros e preparados para o futuro." },
+  { icon: Cpu, t: "Tecnologia de Ponta", d: "Utilizamos ferramentas e tecnologias modernas para desenvolver projetos rápidos e preparados para o futuro." },
 ];
 
 const timeline = [
