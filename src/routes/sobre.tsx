@@ -67,7 +67,7 @@ function Sobre() {
                 <div className="mt-8 flex min-w-0 items-center gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--primary)] font-display text-lg font-bold text-white md:h-14 md:w-14 md:text-xl">R</div>
                   <div>
-                    <div className="font-bold text-sm md:text-base">Rafael Reis</div>
+                    <div className="font-bold text-sm md:text-base">Rodrigo Reis</div>
                     <div className="font-mono-label text-muted-foreground text-xs md:text-sm">CEO & Fundador</div>
                   </div>
                 </div>
