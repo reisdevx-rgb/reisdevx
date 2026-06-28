@@ -122,14 +122,14 @@ function Index() {
             <div>
               <div className="font-mono-label text-[var(--accent)] mb-6">Nossa Filosofia</div>
               <h2 className="font-display text-4xl font-black leading-[1] sm:text-5xl md:text-7xl">
-                Código é <span className="text-[var(--primary)]">arquitetura.</span>
+                Cada projeto tem&nbsp; um&nbsp;<span className="text-[var(--primary)]">propósito.</span>
               </h2>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <div className="space-y-6 text-lg text-muted-foreground self-end">
-              <p>Tratamos cada projeto como uma obra estrutural. Cada linha de código é uma decisão de engenharia; cada pixel, uma escolha estética deliberada.</p>
-              <p>Não construímos apenas sites — construímos instrumentos de dominação digital que geram resultados mensuráveis, crescimento sustentável e presença que impressiona.</p>
+              <p>Acreditamos que um site vai muito além da aparência. Cada detalhe é planejado para transmitir credibilidade, fortalecer a identidade da marca e proporcionar uma experiência intuitiva para o usuário.</p>
+              <p>Não entregamos apenas páginas na internet, criamos soluções digitais modernas que ajudam empresas a se destacar, conquistar clientes e crescer de forma consistente.</p>
               <Link to="/sobre" className="inline-flex items-center gap-2 text-foreground font-mono-label border-b border-[var(--primary)] pb-1 hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors">
                 Conheça nossa história <ArrowRight className="w-4 h-4" />
               </Link>
