@@ -78,7 +78,7 @@ function Index() {
         <div className="relative mx-auto max-w-[1400px] w-full">
           <ScrollReveal delay={100}>
             <h1 className="relative z-10 flex max-w-full flex-col break-words px-0 pt-8 font-display text-[clamp(2.25rem,10vw,10rem)] font-black leading-[0.95] sm:pl-4 md:pl-8 md:pr-4 lg:pl-12">
-              <span className="relative z-10">ENGENHANDO</span>
+              <span className="relative z-10">CONSTRUINDO</span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] relative z-30 py-4 -my-4">IMPÉRIOS</span>
               <span className="relative z-0">DIGITAIS</span>
             </h1>
