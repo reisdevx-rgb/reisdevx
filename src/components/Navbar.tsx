@@ -117,7 +117,12 @@ export function Navbar() {
         ref={panelRef}
         className={`fixed right-0 top-0 z-50 h-dvh w-80 max-w-[85vw] overflow-y-auto border-l border-border bg-background shadow-2xl transition-transform duration-300 ease-in-out lg:hidden ${open ? "translate-x-0" : "translate-x-full"}`}
       >
-        <nav className="flex flex-col p-6 pt-24 gap-4">
+        <div className="flex h-20 items-center px-6 border-b border-border/40">
+          <Link to="/" className="font-display text-xl font-black">
+            ReisDev<span className="text-[var(--accent)]">X</span>
+          </Link>
+        </div>
+        <nav className="flex flex-col p-6 gap-4">
           {links.map((l) => {
             const active = pathname === l.to;
             return (
