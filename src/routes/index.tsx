@@ -218,7 +218,7 @@ function Index() {
             <h2 className="font-display text-4xl font-black sm:text-5xl md:text-7xl">Vamos construir <span className="text-[var(--primary)]">juntos.</span></h2>
             <p className="text-muted-foreground mt-6 max-w-2xl mx-auto text-lg">Transforme sua visão em realidade digital. Nossa equipe está pronta para criar algo extraordinário.</p>
             <Link to="/contato" className="mt-10 inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-sm bg-[var(--primary)] px-6 py-4 font-mono-label text-white transition-all hover:shadow-[0_0_25px_rgba(0,102,255,0.5)] sm:w-auto sm:px-8">
-              ORÇAMENTO <ArrowRight className="w-4 h-4" />
+              ORÇAMENTO
             </Link>
           </ScrollReveal>
         </div>
