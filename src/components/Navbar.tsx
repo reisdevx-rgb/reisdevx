@@ -62,7 +62,7 @@ export function Navbar() {
 
       <div className="mx-auto grid h-20 max-w-[1400px] grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 sm:px-6 lg:flex lg:justify-between lg:px-12">
 
-        <Link to="/" className="relative z-50 truncate font-display text-xl font-black">
+        <Link to="/" className={`relative z-50 truncate font-display text-xl font-black transition-opacity duration-200 ${open ? "opacity-0 pointer-events-none lg:opacity-100 lg:pointer-events-auto" : "opacity-100"}`}>
           ReisDev<span className="text-[var(--accent)]">X</span>
         </Link>
 
