@@ -45,7 +45,7 @@ const stats: { n?: string; icon?: string; l: string }[] = [
 
 
 const pillars = [
-  { icon: Zap, t: "Performance A+", d: "Sites com carregamento abaixo de 1.5 segundos e Core Web Vitals perfeitos." },
+  { icon: Zap, t: "Performance A+", d: "Sites rápidos, responsivos e desenvolvidos para oferecer uma navegação fluida em qualquer dispositivo." },
   { icon: Shield, t: "Confiabilidade Digital", d: "Soluções modernas desenvolvidas com foco em responsabilidade, qualidade e experiência do usuário." },
   { icon: Award, t: "Design Premiado", d: "Interfaces premiadas que combinam estética editorial com conversão real." },
   { icon: HeartHandshake, t: "Suporte Contínuo", d: "Parceria de longo prazo com manutenção, atualizações e evolução constante." },
