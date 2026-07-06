@@ -25,7 +25,7 @@ export function Footer() {
           <div className="font-mono-label text-foreground/40 mb-4">Contato</div>
           <ul className="space-y-2 text-sm text-foreground/80">
             <li>reisdevx@gmail.com</li>
-            <li>+55 73 9999-9999</li>
+            <li>+55 73 98831-7569</li>
             <li>Itanhém, Brasil</li>
           </ul>
         </div>
