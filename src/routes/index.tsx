@@ -37,7 +37,7 @@ export const Route = createFileRoute("/")({
 
 
 const stats: { n?: string; icon?: string; l: string }[] = [
-  { icon: atendenteAsset.url, l: "ATENDIMENTO PERSONALIZADO" },
+  { l: "ATENDIMENTO PERSONALIZADO" },
   { icon: devicesAsset.url, l: "SITES MODERNOS E RESPONSIVOS" },
   { icon: raioAsset.url, l: "FOCO EM PERFORMANCE E SEO" },
   { icon: apertoMaoAsset.url, l: "SUPORTE DEDICADO" },
