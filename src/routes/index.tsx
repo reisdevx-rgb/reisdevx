@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { ArrowRight, ArrowDown, Zap, Shield, Award, HeartHandshake, X } from "lucide-react";
 import barbeariaImg from "@/assets/barbearia.png";
 import clinicaImg from "@/assets/clinica-medica.png";
-import atendenteAsset from "@/assets/atendente.png.asset.json";
+import atendenteAsset from "@/assets/atendente-2.png.asset.json";
 import devicesAsset from "@/assets/devices.png.asset.json";
 import raioAsset from "@/assets/raio.png.asset.json";
 import apertoMaoAsset from "@/assets/aperto-mao.png.asset.json";
@@ -37,7 +37,7 @@ export const Route = createFileRoute("/")({
 
 
 const stats: { n?: string; icon?: string; l: string }[] = [
-  { l: "ATENDIMENTO PERSONALIZADO" },
+  { icon: atendenteAsset.url, l: "ATENDIMENTO PERSONALIZADO" },
   { icon: devicesAsset.url, l: "SITES MODERNOS E RESPONSIVOS" },
   { icon: raioAsset.url, l: "FOCO EM PERFORMANCE E SEO" },
   { icon: apertoMaoAsset.url, l: "SUPORTE DEDICADO" },
