@@ -71,9 +71,6 @@ function Index() {
         <InteractiveDots />
 
 
-        <div className="absolute inset-0 opacity-[0.25] pointer-events-none mix-blend-overlay">
-          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80" alt="" className="w-full h-full object-cover" />
-        </div>
         <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border/30" />
         <div className="relative mx-auto max-w-[1400px] w-full">
           <ScrollReveal delay={100}>
