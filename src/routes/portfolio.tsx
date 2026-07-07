@@ -120,13 +120,25 @@ function Portfolio() {
               <div className="w-3 h-3 rounded-full bg-green-500" />
               <span className="ml-4 font-mono-label text-sm text-muted-foreground hidden md:inline">Visualização de Modelo</span>
             </div>
-            <button 
-              onClick={() => setPreviewUrl(null)}
-              className="flex shrink-0 items-center gap-2 font-mono-label transition-colors hover:text-[var(--accent)]"
-            >
-              <X className="w-5 h-5" />
-              <span>Fechar</span>
-            </button>
+            <div className="flex shrink-0 items-center gap-3">
+              <a
+                href={previewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-sm border border-border px-3 py-1.5 font-mono-label text-sm transition-colors hover:border-[var(--primary)] hover:text-[var(--primary)]"
+              >
+                <ExternalLink className="w-4 h-4" />
+                <span className="hidden sm:inline">Abrir em nova aba</span>
+              </a>
+              <button
+                onClick={() => setPreviewUrl(null)}
+                className="flex items-center gap-2 font-mono-label transition-colors hover:text-[var(--accent)]"
+              >
+                <X className="w-5 h-5" />
+                <span>Fechar</span>
+              </button>
+            </div>
+
           </div>
           <div className="w-full h-full pt-16">
             <iframe 
