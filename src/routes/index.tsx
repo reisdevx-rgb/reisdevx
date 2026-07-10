@@ -6,10 +6,10 @@ import { useState, useEffect } from "react";
 import { ArrowRight, ArrowDown, Zap, Shield, Award, HeartHandshake, X } from "lucide-react";
 import barbeariaImg from "@/assets/barbearia.png";
 import clinicaImg from "@/assets/clinica-medica.png";
-import atendenteAsset from "@/assets/atendente-2.png.asset.json";
-import devicesAsset from "@/assets/devices.png.asset.json";
-import raioAsset from "@/assets/raio.png.asset.json";
-import apertoMaoAsset from "@/assets/aperto-mao.png.asset.json";
+const atendenteAsset = { url: "/img/atendente-2.png" };
+const devicesAsset = { url: "/img/devices.png" };
+const raioAsset = { url: "/img/raio.png" };
+const apertoMaoAsset = { url: "/img/aperto-mao.png" };
 
 
 
