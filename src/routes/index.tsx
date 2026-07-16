@@ -182,7 +182,7 @@ function Index() {
           {stats.map((s, i) => (
             <div key={s.l} className={`flex min-h-full flex-col items-center justify-center p-5 text-center sm:p-8 lg:p-10 ${i > 0 ? "md:border-l border-border" : ""} ${i % 2 === 1 ? "border-l md:border-l" : ""} ${i >= 2 ? "border-t md:border-t-0" : ""}`}>
               {s.icon ? (
-                <img src={s.icon} alt={s.l} className="w-12 h-12 object-contain" />
+                <img src={s.icon} alt={s.l} width={48} height={48} loading="lazy" decoding="async" className="w-12 h-12 object-contain" />
               ) : (
                 <div className="font-display font-black text-5xl text-[var(--primary)]">{s.n}</div>
               )}
