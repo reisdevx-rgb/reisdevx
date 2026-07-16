@@ -76,7 +76,7 @@ export const Route = createFileRoute("/contato")({
 
 const info = [
   { icon: Mail, t: "Email", v: "reisdevx@gmail.com" },
-  { icon: MessageCircle, t: "WhatsApp", v: "+55 73 9999-9999" },
+  { icon: MessageCircle, t: "WhatsApp", v: "+55 73 98831-7569" },
   { icon: MapPin, t: "Localização", v: "Itanhém, Brasil" },
   { icon: Clock, t: "Resposta", v: "Em até 24 horas úteis" },
 ];
