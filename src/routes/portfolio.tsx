@@ -106,7 +106,7 @@ function Portfolio() {
                 className="group block text-left w-full"
               >
                 <div className="relative aspect-video overflow-hidden bg-muted rounded-sm">
-                  <img src={p.img} alt={p.n} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
+                  <img src={p.img} alt={`Projeto ${p.n} — ${p.cat} — ReisDevX`} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute inset-0 bg-[var(--primary)]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                     <div className="mx-4 rounded-sm bg-white px-4 py-3 text-center font-mono-label font-bold text-[var(--primary)] shadow-xl transition-transform duration-500 group-hover:translate-y-0 sm:px-6">
                       VISUALIZAR MODELO
