@@ -83,14 +83,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@reisdevx" },
       { name: "twitter:creator", content: "@reisdevx" },
-      { title: "Lovable App" },
-      { property: "og:title", content: "Lovable App" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "description", content: "ReisDevX AZUL is a website replica that offers a modern, technological, and premium visual identity." },
-      { property: "og:description", content: "ReisDevX AZUL is a website replica that offers a modern, technological, and premium visual identity." },
-      { name: "twitter:description", content: "ReisDevX AZUL is a website replica that offers a modern, technological, and premium visual identity." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c94d2506-05a1-40c8-97e6-8a0d25708473/id-preview-2214b6eb--02354174-23e9-4072-9351-fd9ed3778f57.lovable.app-1783364748371.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c94d2506-05a1-40c8-97e6-8a0d25708473/id-preview-2214b6eb--02354174-23e9-4072-9351-fd9ed3778f57.lovable.app-1783364748371.png" },
+      // Sitewide defaults only. Per-page title, description, og:image e twitter:image
+      // são definidos em cada rota folha (index.tsx, servicos.tsx, etc.).
     ],
     links: [
       { rel: "stylesheet", href: appCss },
