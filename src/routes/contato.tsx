@@ -1,14 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Shell } from "@/components/Shell";
 import { ScrollReveal, StaggerReveal } from "@/components/ScrollReveal";
-import { useState } from "react";
+import { useId, useState } from "react";
 import { Mail, MessageCircle, MapPin, Clock, Plus, Minus } from "lucide-react";
+
+const OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c94d2506-05a1-40c8-97e6-8a0d25708473/id-preview-2214b6eb--02354174-23e9-4072-9351-fd9ed3778f57.lovable.app-1783364748371.png";
 
 export const Route = createFileRoute("/contato")({
   component: Contato,
   head: () => {
-    const title = "Contato — Solicite seu Projeto Digital | ReisDevX";
-    const description = "Fale com a ReisDevX e inicie seu projeto de criação de site, landing page, e-commerce ou aplicação. Orçamento personalizado em até 24h úteis.";
+    const title = "Contato | Solicite um Orçamento de Site — ReisDevX";
+    const description = "Fale com a ReisDevX e receba um orçamento para criação de site, landing page, loja virtual ou sistema web. Resposta em até 24 horas úteis.";
     const url = "https://reisdevx.com.br/contato";
     return {
       meta: [
@@ -17,10 +19,56 @@ export const Route = createFileRoute("/contato")({
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:url", content: url },
+        { property: "og:type", content: "website" },
+        { property: "og:image", content: OG_IMAGE },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
+        { name: "twitter:image", content: OG_IMAGE },
       ],
       links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Início", item: "https://reisdevx.com.br/" },
+              { "@type": "ListItem", position: 2, name: "Contato", item: url },
+            ],
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            name: "Contato ReisDevX",
+            url,
+            inLanguage: "pt-BR",
+            mainEntity: {
+              "@type": "Organization",
+              name: "ReisDevX",
+              email: "reisdevx@gmail.com",
+              telephone: "+55 73 98831-7569",
+              areaServed: { "@type": "Country", name: "Brasil" },
+            },
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "Qual o prazo médio de entrega?", acceptedAnswer: { "@type": "Answer", text: "Sites institucionais entre 3 e 6 semanas. E-commerce entre 6 e 10 semanas. SaaS varia conforme escopo, com média de 3 a 6 meses." } },
+              { "@type": "Question", name: "Vocês oferecem suporte pós-entrega?", acceptedAnswer: { "@type": "Answer", text: "Sim. Todos os projetos incluem 30 dias de suporte gratuito. Após esse período, oferecemos planos mensais de manutenção e evolução." } },
+              { "@type": "Question", name: "Como funciona o processo de pagamento?", acceptedAnswer: { "@type": "Answer", text: "Trabalhamos com 50% de entrada para início e 50% na entrega final. Para projetos maiores, dividimos em marcos com pagamentos parcelados." } },
+              { "@type": "Question", name: "Posso pedir revisões durante o projeto?", acceptedAnswer: { "@type": "Answer", text: "Sim. Cada fase contempla rodadas de revisão. Solicitações fora do escopo inicial são orçadas como adicionais transparentes." } },
+            ],
+          }),
+        },
+      ],
     };
   },
 });
@@ -28,7 +76,7 @@ export const Route = createFileRoute("/contato")({
 
 const info = [
   { icon: Mail, t: "Email", v: "reisdevx@gmail.com" },
-  { icon: MessageCircle, t: "WhatsApp", v: "+55 73 9999-9999" },
+  { icon: MessageCircle, t: "WhatsApp", v: "+55 73 98831-7569" },
   { icon: MapPin, t: "Localização", v: "Itanhém, Brasil" },
   { icon: Clock, t: "Resposta", v: "Em até 24 horas úteis" },
 ];
@@ -80,8 +128,8 @@ function Contato() {
                 <Select label="Investimento estimado *" value={form.investimento} onChange={(v) => upd("investimento", v)} options={["Até R$ 5.000", "R$ 5.000 – R$ 15.000", "R$ 15.000 – R$ 30.000", "R$ 30.000 – R$ 60.000", "Acima de R$ 60.000"]} />
               </div>
               <div>
-                <label className="font-mono-label text-muted-foreground">Briefing do projeto *</label>
-                <textarea required rows={6} value={form.briefing} onChange={(e) => upd("briefing", e.target.value)} className="mt-2 w-full border border-border bg-background px-4 py-3 focus:border-[var(--primary)] outline-none rounded-sm transition-colors" />
+                <label htmlFor="briefing" className="font-mono-label text-muted-foreground">Briefing do projeto *</label>
+                <textarea id="briefing" name="briefing" required rows={6} value={form.briefing} onChange={(e) => upd("briefing", e.target.value)} className="mt-2 w-full border border-border bg-background px-4 py-3 focus:border-[var(--primary)] outline-none rounded-sm transition-colors" />
               </div>
               <button type="submit" className="w-full rounded-sm bg-[var(--primary)] px-6 py-4 font-mono-label text-white transition-all hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] md:w-auto md:px-8">Enviar Briefing</button>
             </form>
@@ -136,18 +184,20 @@ function Contato() {
 }
 
 function Field({ label, value, onChange, type = "text", required }: { label: string; value: string; onChange: (v: string) => void; type?: string; required?: boolean }) {
+  const id = useId();
   return (
     <div>
-      <label className="font-mono-label text-muted-foreground">{label}</label>
-      <input required={required} type={type} value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 outline-none transition-colors focus:border-[var(--primary)]" />
+      <label htmlFor={id} className="font-mono-label text-muted-foreground">{label}</label>
+      <input id={id} required={required} type={type} value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 outline-none transition-colors focus:border-[var(--primary)]" />
     </div>
   );
 }
 function Select({ label, value, onChange, options }: { label: string; value: string; onChange: (v: string) => void; options: string[] }) {
+  const id = useId();
   return (
     <div>
-      <label className="font-mono-label text-muted-foreground">{label}</label>
-      <select required value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 outline-none transition-colors focus:border-[var(--primary)]">
+      <label htmlFor={id} className="font-mono-label text-muted-foreground">{label}</label>
+      <select id={id} required value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 outline-none transition-colors focus:border-[var(--primary)]">
         <option value="">Selecione...</option>
         {options.map((o) => <option key={o} value={o}>{o}</option>)}
       </select>

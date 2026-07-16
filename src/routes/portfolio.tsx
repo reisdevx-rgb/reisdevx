@@ -6,11 +6,13 @@ import { ArrowRight, X, ExternalLink } from "lucide-react";
 import barbeariaImg from "@/assets/barbearia.png";
 import clinicaImg from "@/assets/clinica-medica.png";
 
+const OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c94d2506-05a1-40c8-97e6-8a0d25708473/id-preview-2214b6eb--02354174-23e9-4072-9351-fd9ed3778f57.lovable.app-1783364748371.png";
+
 export const Route = createFileRoute("/portfolio")({
   component: Portfolio,
   head: () => {
-    const title = "Portfólio — Projetos de Sites e Aplicações | ReisDevX";
-    const description = "Portfólio selecionado de sites, e-commerce, landing pages e plataformas SaaS desenvolvidos pela ReisDevX com precisão arquitetônica e design premium.";
+    const title = "Portfólio | Sites e Projetos Desenvolvidos — ReisDevX";
+    const description = "Veja o portfólio de sites, landing pages e sistemas web desenvolvidos pela ReisDevX com foco em performance, design e resultados reais.";
     const url = "https://reisdevx.com.br/portfolio";
     return {
       meta: [
@@ -19,10 +21,26 @@ export const Route = createFileRoute("/portfolio")({
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:url", content: url },
+        { property: "og:type", content: "website" },
+        { property: "og:image", content: OG_IMAGE },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
+        { name: "twitter:image", content: OG_IMAGE },
       ],
       links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Início", item: "https://reisdevx.com.br/" },
+              { "@type": "ListItem", position: 2, name: "Portfólio", item: url },
+            ],
+          }),
+        },
+      ],
     };
   },
 });
@@ -88,7 +106,7 @@ function Portfolio() {
                 className="group block text-left w-full"
               >
                 <div className="relative aspect-video overflow-hidden bg-muted rounded-sm">
-                  <img src={p.img} alt={p.n} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
+                  <img src={p.img} alt={`Projeto ${p.n} — ${p.cat} — ReisDevX`} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
                   <div className="absolute inset-0 bg-[var(--primary)]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                     <div className="mx-4 rounded-sm bg-white px-4 py-3 text-center font-mono-label font-bold text-[var(--primary)] shadow-xl transition-transform duration-500 group-hover:translate-y-0 sm:px-6">
                       VISUALIZAR MODELO

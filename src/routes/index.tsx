@@ -13,24 +13,104 @@ const apertoMaoAsset = { url: "/img/aperto-mao.png" };
 
 
 
+const OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c94d2506-05a1-40c8-97e6-8a0d25708473/id-preview-2214b6eb--02354174-23e9-4072-9351-fd9ed3778f57.lovable.app-1783364748371.png";
+
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => {
-    const title = "ReisDevX — Criação de Sites, Landing Pages e Desenvolvimento Web";
-    const description = "Estúdio de desenvolvimento web premium. Criação de sites profissionais, landing pages de alta conversão, e-commerce, SaaS e design de interfaces que dominam mercados.";
+    const title = "ReisDevX | Criação de Sites Profissionais e Soluções Digitais";
+    const description = "A ReisDevX desenvolve sites profissionais, landing pages e sistemas web rápidos, modernos e otimizados para o Google. Solicite um orçamento.";
     const url = "https://reisdevx.com.br/";
     return {
       meta: [
         { title },
         { name: "description", content: description },
-        { name: "keywords", content: "criação de sites, desenvolvimento web, landing pages, design de interfaces, e-commerce, SaaS, sites profissionais, agência digital, ReisDevX" },
+        { name: "keywords", content: "criação de sites, desenvolvimento web, criação de sites profissionais, landing pages, sistemas web, loja virtual, criação de sites para empresas, ReisDevX" },
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:url", content: url },
+        { property: "og:type", content: "website" },
+        { property: "og:image", content: OG_IMAGE },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
+        { name: "twitter:image", content: OG_IMAGE },
       ],
       links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "@id": "https://reisdevx.com.br/#localbusiness",
+            name: "ReisDevX",
+            description,
+            url,
+            image: OG_IMAGE,
+            logo: OG_IMAGE,
+            telephone: "+55 73 98831-7569",
+            priceRange: "$$",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Itanhém",
+              addressRegion: "BA",
+              addressCountry: "BR",
+            },
+            areaServed: { "@type": "Country", name: "Brasil" },
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                opens: "09:00",
+                closes: "18:00",
+              },
+            ],
+            contactPoint: [
+              {
+                "@type": "ContactPoint",
+                telephone: "+55 73 98831-7569",
+                contactType: "customer support",
+                areaServed: "BR",
+                availableLanguage: ["Portuguese"],
+              },
+            ],
+            sameAs: ["https://instagram.com/reisdevx"],
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Qual o prazo médio de entrega de um site?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Sites institucionais entre 3 e 6 semanas. E-commerce entre 6 e 10 semanas. Projetos SaaS variam de 3 a 6 meses conforme escopo.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Vocês oferecem suporte após a entrega?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Sim. Todos os projetos incluem 30 dias de suporte gratuito e planos mensais de manutenção contínua.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Os sites são otimizados para o Google?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Sim. Cada projeto segue as melhores práticas de SEO técnico, performance (Core Web Vitals) e acessibilidade recomendadas pelo Google.",
+                },
+              },
+            ],
+          }),
+        },
+      ],
     };
   },
 });
@@ -102,7 +182,7 @@ function Index() {
           {stats.map((s, i) => (
             <div key={s.l} className={`flex min-h-full flex-col items-center justify-center p-5 text-center sm:p-8 lg:p-10 ${i > 0 ? "md:border-l border-border" : ""} ${i % 2 === 1 ? "border-l md:border-l" : ""} ${i >= 2 ? "border-t md:border-t-0" : ""}`}>
               {s.icon ? (
-                <img src={s.icon} alt={s.l} className="w-12 h-12 object-contain" />
+                <img src={s.icon} alt={s.l} width={48} height={48} loading="lazy" decoding="async" className="w-12 h-12 object-contain" />
               ) : (
                 <div className="font-display font-black text-5xl text-[var(--primary)]">{s.n}</div>
               )}
@@ -190,7 +270,7 @@ function Index() {
              className="group block w-full text-left"
           >
             <div className="relative aspect-video overflow-hidden bg-muted rounded-sm">
-              <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
+              <img src={p.img} alt={`Projeto ${p.name} desenvolvido pela ReisDevX`} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
               <div className="absolute inset-0 bg-[var(--primary)]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <div className="mx-4 rounded-sm bg-white px-4 py-3 text-center font-mono-label font-bold text-[var(--primary)] shadow-xl transition-transform duration-500 group-hover:translate-y-0 sm:px-6">
                   VISUALIZAR MODELO

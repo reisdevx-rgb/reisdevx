@@ -4,11 +4,13 @@ import { ScrollReveal, StaggerReveal } from "@/components/ScrollReveal";
 import { ArrowRight, Code2, Handshake, Globe2, Clock, Sparkles, Cpu, Monitor, Rocket, ShoppingBag, Palette, Zap, Search } from "lucide-react";
 import { ThreeDPhone } from "@/components/ThreeDPhone";
 
+const OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c94d2506-05a1-40c8-97e6-8a0d25708473/id-preview-2214b6eb--02354174-23e9-4072-9351-fd9ed3778f57.lovable.app-1783364748371.png";
+
 export const Route = createFileRoute("/sobre")({
   component: Sobre,
   head: () => {
-    const title = "Sobre a ReisDevX — Estúdio de Desenvolvimento Web Premium";
-    const description = "Conheça a ReisDevX: estúdio de criação de sites e desenvolvimento web focado em performance, design e resultados reais para o seu negócio.";
+    const title = "Sobre a ReisDevX | Estúdio de Criação de Sites e Desenvolvimento Web";
+    const description = "Conheça a ReisDevX: estúdio brasileiro focado em criação de sites, landing pages e sistemas web com performance, design e SEO técnico de verdade.";
     const url = "https://reisdevx.com.br/sobre";
     return {
       meta: [
@@ -17,10 +19,26 @@ export const Route = createFileRoute("/sobre")({
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:url", content: url },
+        { property: "og:type", content: "website" },
+        { property: "og:image", content: OG_IMAGE },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
+        { name: "twitter:image", content: OG_IMAGE },
       ],
       links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Início", item: "https://reisdevx.com.br/" },
+              { "@type": "ListItem", position: 2, name: "Sobre", item: url },
+            ],
+          }),
+        },
+      ],
     };
   },
 });
