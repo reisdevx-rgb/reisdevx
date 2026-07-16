@@ -184,18 +184,20 @@ function Contato() {
 }
 
 function Field({ label, value, onChange, type = "text", required }: { label: string; value: string; onChange: (v: string) => void; type?: string; required?: boolean }) {
+  const id = useId();
   return (
     <div>
-      <label className="font-mono-label text-muted-foreground">{label}</label>
-      <input required={required} type={type} value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 outline-none transition-colors focus:border-[var(--primary)]" />
+      <label htmlFor={id} className="font-mono-label text-muted-foreground">{label}</label>
+      <input id={id} required={required} type={type} value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 outline-none transition-colors focus:border-[var(--primary)]" />
     </div>
   );
 }
 function Select({ label, value, onChange, options }: { label: string; value: string; onChange: (v: string) => void; options: string[] }) {
+  const id = useId();
   return (
     <div>
-      <label className="font-mono-label text-muted-foreground">{label}</label>
-      <select required value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 outline-none transition-colors focus:border-[var(--primary)]">
+      <label htmlFor={id} className="font-mono-label text-muted-foreground">{label}</label>
+      <select id={id} required value={value} onChange={(e) => onChange(e.target.value)} className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 outline-none transition-colors focus:border-[var(--primary)]">
         <option value="">Selecione...</option>
         {options.map((o) => <option key={o} value={o}>{o}</option>)}
       </select>
