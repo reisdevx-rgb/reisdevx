@@ -4,11 +4,13 @@ import { ScrollReveal, StaggerReveal } from "@/components/ScrollReveal";
 import { useState } from "react";
 import { Mail, MessageCircle, MapPin, Clock, Plus, Minus } from "lucide-react";
 
+const OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c94d2506-05a1-40c8-97e6-8a0d25708473/id-preview-2214b6eb--02354174-23e9-4072-9351-fd9ed3778f57.lovable.app-1783364748371.png";
+
 export const Route = createFileRoute("/contato")({
   component: Contato,
   head: () => {
-    const title = "Contato — Solicite seu Projeto Digital | ReisDevX";
-    const description = "Fale com a ReisDevX e inicie seu projeto de criação de site, landing page, e-commerce ou aplicação. Orçamento personalizado em até 24h úteis.";
+    const title = "Contato | Solicite um Orçamento de Site — ReisDevX";
+    const description = "Fale com a ReisDevX e receba um orçamento para criação de site, landing page, loja virtual ou sistema web. Resposta em até 24 horas úteis.";
     const url = "https://reisdevx.com.br/contato";
     return {
       meta: [
@@ -17,10 +19,56 @@ export const Route = createFileRoute("/contato")({
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:url", content: url },
+        { property: "og:type", content: "website" },
+        { property: "og:image", content: OG_IMAGE },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
+        { name: "twitter:image", content: OG_IMAGE },
       ],
       links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Início", item: "https://reisdevx.com.br/" },
+              { "@type": "ListItem", position: 2, name: "Contato", item: url },
+            ],
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            name: "Contato ReisDevX",
+            url,
+            inLanguage: "pt-BR",
+            mainEntity: {
+              "@type": "Organization",
+              name: "ReisDevX",
+              email: "reisdevx@gmail.com",
+              telephone: "+55 73 98831-7569",
+              areaServed: { "@type": "Country", name: "Brasil" },
+            },
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "Qual o prazo médio de entrega?", acceptedAnswer: { "@type": "Answer", text: "Sites institucionais entre 3 e 6 semanas. E-commerce entre 6 e 10 semanas. SaaS varia conforme escopo, com média de 3 a 6 meses." } },
+              { "@type": "Question", name: "Vocês oferecem suporte pós-entrega?", acceptedAnswer: { "@type": "Answer", text: "Sim. Todos os projetos incluem 30 dias de suporte gratuito. Após esse período, oferecemos planos mensais de manutenção e evolução." } },
+              { "@type": "Question", name: "Como funciona o processo de pagamento?", acceptedAnswer: { "@type": "Answer", text: "Trabalhamos com 50% de entrada para início e 50% na entrega final. Para projetos maiores, dividimos em marcos com pagamentos parcelados." } },
+              { "@type": "Question", name: "Posso pedir revisões durante o projeto?", acceptedAnswer: { "@type": "Answer", text: "Sim. Cada fase contempla rodadas de revisão. Solicitações fora do escopo inicial são orçadas como adicionais transparentes." } },
+            ],
+          }),
+        },
+      ],
     };
   },
 });
