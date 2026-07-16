@@ -128,8 +128,8 @@ function Contato() {
                 <Select label="Investimento estimado *" value={form.investimento} onChange={(v) => upd("investimento", v)} options={["Até R$ 5.000", "R$ 5.000 – R$ 15.000", "R$ 15.000 – R$ 30.000", "R$ 30.000 – R$ 60.000", "Acima de R$ 60.000"]} />
               </div>
               <div>
-                <label className="font-mono-label text-muted-foreground">Briefing do projeto *</label>
-                <textarea required rows={6} value={form.briefing} onChange={(e) => upd("briefing", e.target.value)} className="mt-2 w-full border border-border bg-background px-4 py-3 focus:border-[var(--primary)] outline-none rounded-sm transition-colors" />
+                <label htmlFor="briefing" className="font-mono-label text-muted-foreground">Briefing do projeto *</label>
+                <textarea id="briefing" name="briefing" required rows={6} value={form.briefing} onChange={(e) => upd("briefing", e.target.value)} className="mt-2 w-full border border-border bg-background px-4 py-3 focus:border-[var(--primary)] outline-none rounded-sm transition-colors" />
               </div>
               <button type="submit" className="w-full rounded-sm bg-[var(--primary)] px-6 py-4 font-mono-label text-white transition-all hover:shadow-[0_0_20px_rgba(0,102,255,0.4)] md:w-auto md:px-8">Enviar Briefing</button>
             </form>
