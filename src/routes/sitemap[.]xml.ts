@@ -13,11 +13,14 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
+        const { getAllPosts } = await import("@/lib/posts");
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/servicos", changefreq: "monthly", priority: "0.9" },
           { path: "/portfolio", changefreq: "monthly", priority: "0.8" },
           { path: "/sobre", changefreq: "monthly", priority: "0.7" },
+          { path: "/blog", changefreq: "weekly", priority: "0.8" },
+          ...getAllPosts().map((p) => ({ path: `/blog/${p.slug}`, changefreq: "monthly" as const, priority: "0.6" })),
           { path: "/contato", changefreq: "yearly", priority: "0.6" },
         ];
 
