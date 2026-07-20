@@ -41,7 +41,7 @@
   --card-foreground: #FFFFFF;
   --popover: #111111;
   --popover-foreground: #FFFFFF;
-  --primary: #0066FF;
+  --primary: #0095FF;
   --primary-foreground: #FFFFFF;
   --secondary: #111111;
   --secondary-foreground: #FFFFFF;
@@ -53,7 +53,7 @@
   --destructive-foreground: #FFFFFF;
   --border: #222222;
   --input: #222222;
-  --ring: #0066FF;
+  --ring: #0095FF;
 }
 
 .light {
@@ -63,19 +63,19 @@
   --card-foreground: #050505;
   --popover: #FFFFFF;
   --popover-foreground: #050505;
-  --primary: #0066FF;
+  --primary: #0095FF;
   --primary-foreground: #FFFFFF;
   --secondary: #F0F0F2;
   --secondary-foreground: #050505;
   --muted: #F0F0F2;
   --muted-foreground: #555555;
-  --accent: #0066FF;
+  --accent: #0095FF;
   --accent-foreground: #FFFFFF;
   --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
   --border: #E5E5E7;
   --input: #E5E5E7;
-  --ring: #0066FF;
+  --ring: #0095FF;
 }
 
 @layer base {
@@ -150,7 +150,7 @@ a[href*="lovable.dev"][target="_blank"] {
 @layer components {
   .portfolio-card {
     @apply relative overflow-hidden transition-all duration-500 rounded-sm border border-border bg-card;
-    box-shadow: 0 0 15px rgba(0, 102, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 149, 255, 0.1);
   }
 
   .portfolio-card::before {
@@ -162,7 +162,7 @@ a[href*="lovable.dev"][target="_blank"] {
 
   .portfolio-card:hover {
     @apply scale-[1.02] border-[var(--primary)]/50;
-    box-shadow: 0 0 30px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 149, 255, 0.3);
   }
 
   .portfolio-card:hover::before {
@@ -182,9 +182,9 @@ a[href*="lovable.dev"][target="_blank"] {
 }
 
 @keyframes pulse-glow {
-  0% { box-shadow: 0 0 15px rgba(0, 102, 255, 0.1); }
-  50% { box-shadow: 0 0 25px rgba(0, 102, 255, 0.2); }
-  100% { box-shadow: 0 0 15px rgba(0, 102, 255, 0.1); }
+  0% { box-shadow: 0 0 15px rgba(0, 149, 255, 0.1); }
+  50% { box-shadow: 0 0 25px rgba(0, 149, 255, 0.2); }
+  100% { box-shadow: 0 0 15px rgba(0, 149, 255, 0.1); }
 }
 
 .portfolio-card {
