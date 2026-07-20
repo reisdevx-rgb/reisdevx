@@ -116,7 +116,7 @@ function BlogPost() {
           </ScrollReveal>
 
           <div className="mt-12 md:mt-16 space-y-10">
-            {post.content.map((block, i) => (
+            {post.content.map((block: { heading?: string; paragraphs: string[] }, i: number) => (
               <ScrollReveal key={i} delay={i * 60}>
                 {block.heading && (
                   <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight mb-4">
@@ -124,7 +124,7 @@ function BlogPost() {
                   </h2>
                 )}
                 <div className="space-y-4">
-                  {block.paragraphs.map((p, j) => (
+                  {block.paragraphs.map((p: string, j: number) => (
                     <p key={j} className="text-base md:text-lg text-foreground/80 leading-[1.75]">{p}</p>
                   ))}
                 </div>
