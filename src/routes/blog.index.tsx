@@ -4,7 +4,7 @@ import { ScrollReveal, StaggerReveal } from "@/components/ScrollReveal";
 import { ArrowUpRight, Calendar, Clock } from "lucide-react";
 import { getAllPosts } from "@/lib/posts";
 
-export const Route = createFileRoute("/blog")({
+export const Route = createFileRoute("/blog/")({
   component: BlogIndex,
   head: () => {
     const title = "Blog | Insights sobre Desenvolvimento Web, SEO e Design — ReisDevX";
