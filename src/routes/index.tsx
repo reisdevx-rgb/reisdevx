@@ -163,7 +163,7 @@ function Index() {
           <ScrollReveal delay={300}>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:pl-4 md:pl-8 lg:pl-12">
               <Link to="/contato" className="group inline-flex w-full max-w-full items-center justify-center gap-3 rounded-sm bg-[var(--primary)] px-6 py-4 text-center font-mono-label text-white transition-all hover:shadow-[0_0_25px_rgba(0,102,255,0.5)] sm:w-auto">
-                ORÇAMENTO <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                ORÇAMENTO
               </Link>
               <Link to="/portfolio" className="inline-flex w-full max-w-full items-center justify-center gap-3 rounded-sm border border-[var(--primary)] px-6 py-4 text-center font-mono-label text-[var(--primary)] transition-all hover:bg-[var(--primary)] hover:text-white sm:w-auto">
                 Ver Portfólio
